@@ -1,0 +1,234 @@
+.scr-root-container {
+  --scr-gold: #e5ab24;
+  --scr-dark-bg: #070707;
+  --scr-card-inner: #121212;
+  --scr-border-color: #252525;
+  
+  background-color: transparent;
+  padding: 60px 10%;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Header Section */
+.scr-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.scr-main-title {
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+  max-width: 471px;
+}
+
+.scr-title-white{
+  color: #FDF803;
+}
+.scr-top-desc-box {
+  position: relative;
+  max-width: 450px;
+  padding: 25px 30px;
+  border-radius: 40px;
+  background: rgba(229, 171, 36, 0.05);
+  z-index: 1;
+}
+
+/* Gradient Border Layer */
+.scr-top-desc-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* border thickness */
+  border-radius: 40px;
+  background: linear-gradient(
+    270deg,
+    #110E0D,
+    #E5AB24,
+    #110E0D
+  );
+  background-size: 300% 300%;
+  animation: borderFlow 6s linear infinite;
+
+  /* Mask to show only border */
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+/* Animation */
+@keyframes borderFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+
+.scr-top-desc-box p {
+  font-size: 18px;
+  line-height: 1.2;
+  color: #fff;
+  margin: 0;
+  font-weight: 200;
+  letter-spacing: 0%;
+}
+
+/* Grid Layout */
+.scr-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Side Feature Cards */
+.scr-feature-card {
+  position: relative;
+  background: #000;
+  padding:12px 30px;
+  border-radius: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+  
+}
+
+/* Animated Gradient Border */
+.scr-feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1.5px; /* border thickness */
+  border-radius: 30px;
+  background: linear-gradient(
+    270deg,
+    #110E0D,
+    #E5AB24,
+    #110E0D
+  );
+  background-size: 300% 300%;
+  animation: cardBorderFlow 6s linear infinite;
+
+  /* Show only border */
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+/* Animation */
+@keyframes cardBorderFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+
+.scr-feature-card:hover {
+  border-color: var(--scr-gold);
+}
+
+.scr-feature-card {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.scr-feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1.5px;
+  border-radius: 30px;
+  background: linear-gradient(
+    270deg,
+    #110E0D,
+    #E5AB24,
+    #110E0D
+  );
+  background-size: 300% 300%;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Both Opposite to Feature Card */
+.scr-global-card::before,
+.scr-secure-card::before {
+  animation: cardBorderFlowReverse 6s linear infinite;
+}
+
+/* Reverse Animation */
+@keyframes cardBorderFlowReverse {
+  0% { background-position: 300% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.scr-feature-title {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 12px;
+  max-width: 250px;
+  line-height: 100%;
+}
+
+.scr-feature-desc {
+  font-size: 18px;
+  color: #BDBDBD;
+  line-height: 1.3;
+  max-width: 270px;
+  text-align: center;
+}
+
+/* Center Video Frame */
+.scr-video-portal {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.scr-video-frame-inner {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1/1.2; /* Match the vertical look of the SS */
+  border-radius: 50px;
+  overflow: hidden;
+  background: #000;
+}
+
+.scr-main-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.scr-video-ambient-light {
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 100px rgba(0,0,0,0.8);
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .scr-main-title { font-size: 40px; }
+  .scr-header-flex { flex-direction: column; gap: 30px; }
+  .scr-content-grid { grid-template-columns: 1fr; }
+  .scr-video-portal { order: -1; margin-bottom: 40px; }
+}

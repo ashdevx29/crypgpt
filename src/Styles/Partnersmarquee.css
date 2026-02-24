@@ -1,0 +1,97 @@
+.gx-pure-image-marquee {
+
+  --speed: 30s;
+  --item-width: 220px; 
+  --logo-height: 40px;
+  
+  background-color: var(--bg-color);
+  padding: 152px 0;
+  padding-bottom: 0px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.gx-marquee-viewport {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+
+/* Side Fades */
+.gx-marquee-viewport::before,
+.gx-marquee-viewport::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 15%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+.gx-marquee-viewport::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-color), transparent);
+}
+.gx-marquee-viewport::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-color), transparent);
+}
+
+.gx-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: gx-scroll-infinitely var(--speed) linear infinite;
+}
+
+/* Pause animation on hover so user can focus on a logo */
+.gx-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.gx-marquee-slot {
+  width: var(--item-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.gx-partner-img {
+  height: var(--logo-height);
+  width: auto;
+  max-width: 85%;
+  object-fit: contain;
+  
+  /* DEFAULT STATE: Pure White & Slightly Faded */
+  filter: brightness(0) invert(1); 
+  opacity: 0.5;
+  
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+}
+
+/* HOVER STATE: Original Color & Full Brightness */
+.gx-partner-img:hover {
+  filter: none; /* Removes the white overlay to show original colors */
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+@keyframes gx-scroll-infinitely {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 1140px) {
+  .gx-pure-image-marquee {
+  padding: 0px 0;
+}
+}
+
+@media (max-width: 768px) {
+  .gx-pure-image-marquee {
+    --item-width: 150px;
+    --logo-height: 28px;
+    --speed: 20s;
+  }
+}

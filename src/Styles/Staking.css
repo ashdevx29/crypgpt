@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&family=Roboto:wght@400&display=swap');
+
+.cgpt-full-wrapper {
+  color: #fff;
+  min-height: 80vh;
+  padding: 20px 10%;
+  font-family: 'Kanit', sans-serif;
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.cgpt-full-container {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* HERO TEXT */
+.cgpt-full-hero__title {
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 400;
+  margin-bottom: 20px;
+  width: 518px;
+}
+
+.cgpt-full-hero__accent {
+  color: #FDF803;
+  font-weight: 400;
+}
+
+.cgpt-full-hero__desc {
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #E1E3FE;
+  margin-bottom: 5px;
+  max-width: 500px;
+}
+
+/* LIST WITH YELLOW DOTS */
+.cgpt-full-hero__list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.cgpt-full-hero__list li {
+  font-size: 15px;
+  color: #D9D9D9;
+  position: relative;
+  padding-left: 25px; /* Space for the dot */
+  margin-bottom: 5px;
+}
+
+.cgpt-full-hero__list li::before {
+  content: "•";
+  color: #FDF803;
+  position: absolute;
+  left: 0;
+  top: -2px;
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* BUTTON */
+.cgpt-full-hero__btn {
+  background: linear-gradient(90deg, #FDF803 0%, #E5AB24 100%);
+  color: #000;
+  border: none;
+  padding: 14px 32px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  border-top-right-radius: 18px;
+  border-bottom-left-radius: 18px;
+  transition: 0.3s ease;
+}
+
+.cgpt-full-hero__btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(253, 248, 3, 0.4);
+}
+
+/* HUD SVG & VIDEO */
+.cgpt-full-hud__relative {
+  position: relative;
+  width: 100%;
+}
+
+.cgpt-hud-svg-main {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hud-video-container {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+  /* Matches the angular shape of the HUD */
+  /* clip-path: polygon(10% 0, 90% 0, 100% 15%, 100% 85%, 90% 100%, 10% 100%, 0 85%, 0 15%); */
+}
+
+.hud-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .cgpt-full-container { grid-template-columns: 1fr; text-align: center; gap: 35px;}
+  .cgpt-full-hero__desc, .cgpt-full-hero__list { margin-inline: auto; text-align: left; }
+  .cgpt-full-hero__btn { margin: 0 auto; }
+  .cgpt-full-hero__title{width: 95%; font-size: 28px; text-align: left;}
+}

@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700&display=swap');
+
+body {
+  background: #110E0D;
+  /* background: radial-gradient(circle at left, #3a2600 0%, #000 40%); */
+  margin: 0px;
+  padding: 0px;
+  color: #FFFFFF;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: "Kanit", sans-serif;
+}

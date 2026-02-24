@@ -1,0 +1,1035 @@
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  padding: 35px 7rem 15px 7rem;
+  font-family: Poppins, sans-serif;
+  position: relative;
+}
+
+/* ================= LOGO ================= */
+
+.logo img {
+  max-width: 150px;
+  height: 40px;
+}
+
+/* ================= NAVIGATION ================= */
+
+.nav-menu {
+  display: flex;
+  justify-content: right;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Gradient Border Links */
+
+.nav-menu ul li a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 26px;
+  border-radius: 24px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  z-index: 1;
+  transition: 0.3s ease;
+}
+
+/* Gradient Border */
+
+.nav-menu ul li a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  padding: 1px;
+  background: linear-gradient(180deg, #FDF803 0%, #E5AB24 100%);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
+/* Hover Fill */
+
+.nav-menu ul li a:hover {
+  background: linear-gradient(180deg, #FDF803 0%, #E5AB24 100%);
+  color: #000;
+}
+
+/* Active */
+
+.nav-menu ul li a.active {
+  font-weight: 600;
+}
+
+/* ================= DOT ================= */
+
+.dot-icon {
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(180deg, #FDF803 0%, #E5AB24 100%);
+  border-radius: 50%;
+}
+
+.e-icon {
+  margin-left: 12px;
+}
+
+/* ================= VERTICAL LINE ================= */
+
+.h-line {
+  height: 36px;
+  width: 2px;
+  margin: 0 20px;
+  background: linear-gradient(180deg, #FDF803 0%, #E5AB24 100%);
+}
+
+/* ================= CONTACT BUTTON ================= */
+
+.buy-token-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 130px;
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #000;
+  background: linear-gradient(180deg, #FDF803 0%, #E5AB24 100%);
+  transition: 0.3s ease;
+}
+
+.buy-token-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* ================= MOBILE MENU TOGGLE ================= */
+
+.mobile-menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+
+.menu-icon {
+  font-size: 28px;
+  color: #FDF803;
+  /* background: linear-gradient(180deg, #FDF803 0%, #E5AB24 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; */
+}
+
+.mobile-contact {
+  display: none;
+}
+
+
+/* .hamburger-icon,
+.hamburger-icon::before,
+.hamburger-icon::after {
+  width: 25px;
+  height: 3px;
+  background: linear-gradient(180deg, #FDF803 0%, #E5AB24 100%);
+  display: block;
+  position: relative;
+} */
+
+/* .hamburger-icon::before,
+.hamburger-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.hamburger-icon::before {
+  top: -8px;
+}
+
+.hamburger-icon::after {
+  bottom: -8px;
+} */
+
+/* ================= LARGE SCREEN ADJUST ================= */
+
+
+/* Base Layout */
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  padding: 25px 2% 15px 2%;
+
+  position: relative;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap:15px; 
+  align-items: center;
+  /* justify-content: flex-end; */
+}
+
+/* LINK BLOCK */
+.nav-menu ul li a {
+  position: relative; /* Nav-dot iske relative move karega */
+  display: flex;
+  align-items: center;
+  padding: 10px 24px;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(253, 248, 3, 0.1); /* Subtle outline like screenshot */
+}
+
+/* ================= THE DOT (OUTSIDE LEFT) ================= */
+.nav-dot {
+  position: absolute;
+  left: -13px !important; 
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(180deg, #FDF803 0%, #E5AB24 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(253, 248, 3, 0.7); /* Glow effect */
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* ================= THE ARROW (INSIDE RIGHT) ================= */
+.nav-arrow {
+  display: inline-flex;
+  align-items: center;
+  width: 0;
+  opacity: 0;
+  margin-left: 0;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  color: inherit;
+}
+
+/* ================= ACTIVE & HOVER STATES ================= */
+
+/* Jab Link Active ho ya Mouse Hover ho */
+.nav-menu ul li a:hover, 
+.nav-menu ul li a.active {
+  background: linear-gradient(180deg, #FDF803 0%, #E5AB24 100%);
+  color: #000; /* Text black like image */
+  border-color: transparent;
+}
+
+/* Dot Activation: Active state mein hamesha bahar dikhega */
+.nav-menu ul li a:hover .nav-dot,
+.nav-menu ul li a.active .nav-dot {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+  left: -25px; /* Thoda slide effect ke liye thoda aur bahar */
+}
+
+/* Arrow Activation: Button ke andar dikhega */
+.nav-menu ul li a:hover .nav-arrow,
+.nav-menu ul li a.active .nav-arrow {
+  width: 18px;
+  opacity: 1;
+  margin-left: 10px;
+}
+
+.mobile-contact{display: none;}
+/* Mobile Responsive */
+
+.header-stats-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.stat-pill {
+  background: #171921; /* Dark background like SS */
+  border: 1px solid #222;
+  padding: 5px 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-pill:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.stat-column {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  padding:2px;
+}
+
+.stat-main {
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+}
+
+.stat-sub, .stat-status {
+  font-size: 12px;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.g-dot {
+  color: #00FF00;
+  font-size: 10px;
+}
+
+.fire-icon {
+  font-size: 18px;
+}
+
+
+
+
+
+.ecosystem-nav-item {
+  position: relative; /* Taaki box iske niche khule */
+}
+
+.ecosystem-mega-menu {
+  position: absolute;
+  top: 60px; /* Header ke niche */
+  left: 30%;
+  transform: translateX(-50%);
+  max-width: 1100px;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid #333;
+  border-radius: 24px;
+  padding: 40px;
+  z-index: 1000;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+}
+
+.mega-menu-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.mega-left h2 {
+  color: #fff;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.mega-left p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.mega-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.mega-item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.mega-icon {
+  width: 40px;
+  height: 40px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #FDF803; /* Yellow border like icon in SS */
+}
+
+.mega-item h4 {
+  color: #fff;
+  margin: 0;
+  font-size: 16px;
+}
+
+.mega-item p {
+  color: #777;
+  margin: 0;
+  font-size: 12px;
+}
+
+/* Background overlay jab menu khule toh background dark ho jaye */
+.menu-overlay-active {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 900;
+}
+
+.buttontwo-icon {
+  margin: 0px px;
+  max-width: 90px;
+  max-height: 18px;
+}
+
+.stat-status{
+  padding-left: 20px;
+  color: #fff;
+  font-size: 9px;
+}
+
+.one-pill {
+  position: relative;
+  padding: 12px 24px;
+  background: #111;
+  color: #fff;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+/* Thin Gradient Border */
+.one-pill::before {
+  content: "";
+  position: absolute;
+  inset: -1px; /* thinner border */
+  border-radius: 5px;
+  background: linear-gradient(
+    90deg,
+    #e5e1e1,
+    #f1efec,
+    #292a2a,
+    #0e0e0e,
+    #0a0a0a,
+    #0d0d0d
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 4s linear infinite;
+  z-index: -1;
+}
+
+/* Inner Background */
+.one-pill::after {
+  content: "";
+  position: absolute;
+  inset: 1px; /* match thickness */
+  background: #111;
+  border-radius: 5px;
+  z-index: -1;
+}
+
+/* Animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
+
+
+.ecosystem-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 5%;
+  background-color: #000; /* Dark Background */
+  color: #fff;
+  gap: 40px;
+}
+
+/* Left Section */
+.ecosystem-left {
+  flex: 1;
+}
+
+.ecosystem-title {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.ecosystem-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 30px;
+  max-width: 450px;
+}
+
+/* Pills Section */
+.pill-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* tighter like screenshot */
+  margin-top: 10px;
+}
+
+/* All rows */
+.pill-row {
+  display: flex;
+  gap: 12px;
+}
+
+/* Base pill */
+.one-pill {
+  padding: 6px 18px;   /* thinner height */
+  font-size: 13px;     /* slightly smaller */
+  border-radius: 30px;
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #9a9a9a;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+/* First long pill */
+.pill-lg {
+  padding: 6px 28px;
+}
+
+/* Smaller pills (last two) */
+.pill-sm {
+  padding: 6px 14px;
+}
+
+/* Slight left alignment feel */
+.row-1 {
+  margin-left: 0px;
+}
+
+.row-2 {
+  margin-left: 2px;
+}
+
+.row-3 {
+  margin-left: 4px;
+}
+
+.one-pill:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+/* Right Grid Section */
+.mega-right {
+  flex: 1.5;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 20px;
+}
+
+.mega-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.mega-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(145deg, #1a1a1a, #000);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.mega-text h4 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: 0%;
+}
+
+.mega-text p {
+  margin: 5px 0 0 0;
+  color: #666;
+  font-size: 12px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 1024px) {
+  .ecosystem-section {
+    flex-direction: column;
+    padding: 40px 5%;
+  }
+
+  .mega-right {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    width: 100%;
+    margin-top: 40px;
+  }
+  
+  .ecosystem-title {
+    font-size: 2.2rem;
+  }
+}
+/* --- Mobile Responsiveness --- */
+@media (max-width: 1024px) {
+  .ecosystem-section {
+    flex-direction: column;
+    padding: 40px 5%;
+  }
+
+  .mega-right {
+    grid-template-columns: 1fr; /* Single column on mobile */
+    width: 100%;
+    margin-top: 40px;
+  }
+  
+  .ecosystem-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* ============================= */
+/* ======= TABLET VIEW ========= */
+/* ============================= */
+
+@media (max-width: 1024px) {
+
+  .ecosystem-section {
+    flex-direction: column;
+    gap: 10px !important;
+    padding: 60px 6%;
+  }
+
+  .ecosystem-left {
+    max-width: 100%;
+  }
+
+  .mega-right {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 40px;
+    row-gap: 40px;
+  }
+}
+
+
+/* ============================= */
+/* ========= MOBILE ============ */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .ecosystem-section {
+    padding: 10px 5%;
+  }
+
+  .ecosystem-title {
+    font-size: 28px;
+  }
+
+  .ecosystem-desc {
+    font-size: 14px;
+  }
+
+  /* Pills wrap properly */
+  .pill-row {
+    flex-wrap: wrap;
+  }
+
+  .one-pill {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+
+  .pill-lg {
+    padding: 6px 20px;
+  }
+
+  .pill-sm {
+    padding: 6px 12px;
+  }
+
+  /* Right grid becomes single column */
+  .mega-right {
+    grid-template-columns: 1fr;
+    row-gap: 15px;
+  }
+
+  .mega-item {
+    gap: 14px;
+  }
+
+  .mega-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 18px;
+  }
+
+  .mega-text h4 {
+    font-size: 18px;
+  }
+
+  .mega-text p {
+    font-size: 13px;
+  }
+}
+
+
+/* ============================= */
+/* ===== SMALL MOBILE ========== */
+/* ============================= */
+
+/* @media (max-width: 500px) {
+.ecosystem-mega-menu{left: -150px; top: -250px; overflow-x: hidden; overflow-y: auto;}
+
+  .ecosystem-section {
+    padding: 40px 6%;
+    left: 0%;
+  }
+
+    
+
+  .ecosystem-title {
+    font-size: 24px;
+  }
+
+  .mega-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+  }
+
+  .mega-text h4 {
+    font-size: 16px;
+  }
+
+  .mega-text p {
+    font-size: 12px;
+  }
+} */
+
+
+/* Taaki mobile menu mein ye hide ho jaye jaise aapka button hide hota tha */
+@media (max-width: 900px) {
+  .header-stats-group {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav-dot { display: none; } /* Mobile menu me space kam hota hai */
+  .nav-menu ul li a.active { background: none; color: #FDF803; }
+}
+
+@media (max-width: 1280px) {
+  .header {
+    padding: 30px 1rem 15px 1rem;
+  }
+
+  .h-line {
+  height: 36px;
+  width: 2px;
+  margin: 0 10px;
+  background: linear-gradient(180deg, #FDF803 0%, #E5AB24 100%);
+}
+
+  .nav-menu ul {
+    gap: 15px;
+  }
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 992px) {
+
+  .header {
+    padding: 25px 15px 15px 15px;
+  }
+
+  .nav-menu ul {
+    gap: 12px;
+  }
+
+  .buy-token-btn {
+    width: 110px;
+    font-size: 13px;
+  }
+
+  .h-line {
+    margin: 0 15px;
+  }
+}
+
+
+
+/* ================= MODERN MOBILE MENU ================= */
+
+@media (max-width: 1200px) {
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 10px 10px 10px;
+  }
+
+  /* Hide desktop button */
+  .desktop-btn {
+    display: none;
+  }
+
+  /* Overlay */
+  .mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    z-index: 90;
+  }
+
+  /* Slide Down Menu */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: #111;
+    padding-top: 100px;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    z-index: 100;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-menu.open {
+    transform: translateX(0);
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 30px;
+    gap: 5px;
+  }
+
+  .nav-menu ul li {
+    width: 100%;
+  }
+
+  .nav-menu ul li a {
+    width: 100%;
+    font-size: 18px;
+    padding: 14px 18px;
+    /* border-radius: 12px; */
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+
+  .nav-menu ul li a:hover {
+    transform: translateX(6px);
+  }
+
+  .dot-icon {
+    display: none;
+  }
+
+ 
+
+  .h-line {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+    z-index: 110;
+  }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 500px) {
+
+  .logo img {
+    max-width: 110px;
+    height: auto;
+  }
+  .nav-menu {
+    width: 100%;
+  }
+}
+
+.mobile-stats {
+  display: none;
+}
+    
+
+
+@media (max-width: 1200px) {
+
+  /* Header flex layout */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 12px;
+  }
+
+  /* Show mobile stats */
+  .mobile-stats {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Order control */
+  .logo {
+    order: 1;
+  }
+
+  .mobile-stats {
+    order: 2;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+
+  .mobile-menu-toggle {
+    order: 3;
+  }
+}
+
+@media (max-width: 500px) {
+ .mobile-stats {
+  display: none !important;
+}
+}
+/* Hide by default */
+.mobile-menu-stats {
+  display: none;
+}
+
+/* Only show inside mobile menu under 480px */
+@media (max-width: 500px) {
+
+  /* Header wala hide */
+  .mobile-stats {
+    display: none !important;
+  }
+
+  /* Menu wala show */
+  .mobile-menu-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 30px 20px 30px;
+    margin-bottom: 20px;
+  }
+
+  .mobile-menu-stats .stat-pill {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.mbl-mr-btm{
+  margin-top: 10px;
+}
+.hidden-desktop {
+  display: none !important;
+}
+
+/* 480px ke niche show hoga */
+@media (max-width: 500px) {
+  .hidden-desktop {
+    display: block;
+  }
+
+   .mobile-contact a {
+    background: linear-gradient(180deg, #FDF803 0%, #E5AB24 100%);
+    color: #000 !important;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 15px;
+  }
+  .mobile-contact {
+  display: block;
+  width: 100%;
+}
+
+}
+
+@media (max-width: 1200px) {
+
+  .ecosystem-mega-menu {
+    position: fixed;          
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 92%;
+    max-width: 95%;
+    max-height: 85vh;
+    overflow-y: auto;
+
+    padding: 25px;
+    border-radius: 20px;
+    z-index: 9999;
+  }
+
+}
+.eco-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  z-index: 999;
+}
+
+/* Desktop */
+@media (min-width: 1201px) {
+  .ecosystem-mega-menu {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1100px;
+    border-radius: 24px;
+    padding: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 1200px) {
+  .ecosystem-mega-menu {
+    position: fixed;
+   
+    background: #0b0b0f;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .mega-menu-content {
+    display: grid;
+    grid-template-columns: none;
+    gap: 40px;
+}
+}
