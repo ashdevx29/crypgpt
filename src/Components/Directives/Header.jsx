@@ -4,7 +4,7 @@ import logo from "../../assets/logo.png";
 import "../../Styles/Header.css";
 import { PiArrowBendDownRightFill } from "react-icons/pi";
 import { HiMenuAlt1, HiX } from "react-icons/hi";
-import {  useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import fireIcon from "../../assets/b1icon.png"; // Fire icon ke liye image import
 import buttonTwo from "../../assets/buttonTwo.png"; // Button two ke liye image import
 import one from "../../assets/header-eco/one.png";
@@ -22,16 +22,16 @@ import { useLocation } from "react-router-dom";
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-const [isEcosystemOpen, setIsEcosystemOpen] = useState(false);
+  const [isEcosystemOpen, setIsEcosystemOpen] = useState(false);
   const ecosystemRef = useRef(null); // Menu ko track karne ke liye ref
   const [isConsentOpen, setIsConsentOpen] = useState(false);
-const navigate = useNavigate();
-const location = useLocation();
+  const navigate = useNavigate();
+  const location = useLocation();
 
-useEffect(() => {
-  setIsEcosystemOpen(false);
-  setIsMobileMenuOpen(false);
-}, [location]);
+  useEffect(() => {
+    setIsEcosystemOpen(false);
+    setIsMobileMenuOpen(false);
+  }, [location]);
 
   // Bahar click karne par band karne ka logic
   useEffect(() => {
@@ -49,84 +49,84 @@ useEffect(() => {
     };
   }, []);
 
-const toggleEcosystem = (e) => {
-  e.preventDefault();
-  setIsEcosystemOpen(!isEcosystemOpen);
-};
+  const toggleEcosystem = (e) => {
+    e.preventDefault();
+    setIsEcosystemOpen(!isEcosystemOpen);
+  };
 
   return (
     <>
-    <header className="header">
-      <div className="logo">
-        <NavLink to="/">
-          <img src={logo} alt="Logo" />
-      </NavLink>
-      </div> 
+      <header className="header">
+        <div className="logo">
+          <NavLink to="/">
+            <img src={logo} alt="Logo" />
+          </NavLink>
+        </div>
 
 
 
-      {/* ✅ Mobile Stats (Only below 1180px) */}
-<div className="mobile-stats">
- <a
-  href="https://bscscan.com/advanced-filter?fadd=0x0000000000000000000000000000000000000000&tadd=0x0000000000000000000000000000000000000000&tkn=0xe0ae52e75b38b605e9c879a570ee1e7bcc66254b"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="stat-pill one-pill"
->
-  <span className="fire-icon">
-    <img src={fireIcon} alt="Fire Icon" />
-  </span>
-  <div className="stat-column">
-    <span className="stat-main">13 M</span>
-    <span className="stat-sub">CRYPGPT BURNED</span>
-  </div>
-</a>
+        {/* ✅ Mobile Stats (Only below 1180px) */}
+        <div className="mobile-stats">
+          <a
+            href="https://bscscan.com/advanced-filter?fadd=0x0000000000000000000000000000000000000000&tadd=0x0000000000000000000000000000000000000000&tkn=0xe0ae52e75b38b605e9c879a570ee1e7bcc66254b"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="stat-pill one-pill"
+          >
+            <span className="fire-icon">
+              <img src={fireIcon} alt="Fire Icon" />
+            </span>
+            <div className="stat-column">
+              <span className="stat-main">13 M</span>
+              <span className="stat-sub">CRYPGPT BURNED</span>
+            </div>
+          </a>
 
-  <div className="stat-pill">
-    <div className="stat-column">
-      <img src={buttonTwo} alt="Button Icon" className="buttontwo-icon" />
-      <span className="stat-status">
-        ON BOARD <span className="g-dot">●</span>
-      </span>
-    </div>
-  </div>
-  
-</div>
-
-      {isMobileMenuOpen && (
-        <div
-          className="mobile-overlay"
-          onClick={() => setIsMobileMenuOpen(false)}
-        ></div>
-      )}
-
-      <nav className={`nav-menu ${isMobileMenuOpen ? "open" : ""}`}>
-        {/* <ul onClick={() => setIsMobileMenuOpen(false)}> */}
-      <ul>
-        <li>
-           <NavLink 
-  to="/" 
-  onClick={() => setIsMobileMenuOpen(false)}
->
-  <span className="nav-dot"></span>
-  Home
-  <span className="nav-arrow">
-    <PiArrowBendDownRightFill />
-  </span>
-</NavLink>
-          </li>
-
-          <li>
-            <NavLink to="/token">
-              <span className="nav-dot"></span>
-              Token
-              <span className="nav-arrow">
-                <PiArrowBendDownRightFill />
+          <div className="stat-pill">
+            <div className="stat-column">
+              <img src={buttonTwo} alt="Button Icon" className="buttontwo-icon" />
+              <span className="stat-status">
+                ON BOARD <span className="g-dot">●</span>
               </span>
-            </NavLink>
-          </li>
+            </div>
+          </div>
 
-          {/* <li>
+        </div>
+
+        {isMobileMenuOpen && (
+          <div
+            className="mobile-overlay"
+            onClick={() => setIsMobileMenuOpen(false)}
+          ></div>
+        )}
+
+        <nav className={`nav-menu ${isMobileMenuOpen ? "open" : ""}`}>
+          {/* <ul onClick={() => setIsMobileMenuOpen(false)}> */}
+          <ul>
+            <li>
+              <NavLink
+                to="/"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <span className="nav-dot"></span>
+                Home
+                <span className="nav-arrow">
+                  <PiArrowBendDownRightFill />
+                </span>
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink to="/token">
+                <span className="nav-dot"></span>
+                Token
+                <span className="nav-arrow">
+                  <PiArrowBendDownRightFill />
+                </span>
+              </NavLink>
+            </li>
+
+            {/* <li>
             <NavLink to="/ecosystem">
               <span className="nav-dot"></span>
               Ecosystem
@@ -136,48 +136,48 @@ const toggleEcosystem = (e) => {
             </NavLink>
           </li> */}
 
-{/* Ecosystem Item with Ref */}
-      <li className="ecosystem-nav-item">
-  <a
-    href="#"
-    onClick={toggleEcosystem}
-    className="ecosystem-link"
-  >
-    <span className="nav-dot"></span>
-    Ecosystem
-    <span className={`nav-arrow mobile-arrow ${isEcosystemOpen ? "rotate" : ""}`}>
-      <PiArrowBendDownRightFill />
-    </span>
-  </a>
+            {/* Ecosystem Item with Ref */}
+            <li className="ecosystem-nav-item">
+              <a
+                href="#"
+                onClick={toggleEcosystem}
+                className="ecosystem-link"
+              >
+                <span className="nav-dot"></span>
+                Ecosystem
+                <span className={`nav-arrow mobile-arrow ${isEcosystemOpen ? "rotate" : ""}`}>
+                  <PiArrowBendDownRightFill />
+                </span>
+              </a>
 
-  {/* 👇 MOBILE ACCORDION CONTENT */}
-  {isEcosystemOpen && (
-    <div className="mobile-eco-dropdown">
-     <EcosystemPop onClose={() => setIsEcosystemOpen(false)} />
-    </div>
-  )}
-</li>
-               
-                {/* Aapka pehle wala mega-menu-content yahan rahega */}
-            
-            
-        
+              {/* 👇 MOBILE ACCORDION CONTENT */}
+              {isEcosystemOpen && (
+                <div className="mobile-eco-dropdown">
+                  <EcosystemPop onClose={() => setIsEcosystemOpen(false)} />
+                </div>
+              )}
+            </li>
 
-<li>
-  <a
-    href="https://crypgpt-token.gitbook.io/crypgpts-token/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <span className="nav-dot"></span>
-    WhitePaper
-    <span className="nav-arrow">
-      <PiArrowBendDownRightFill />
-    </span>
-  </a>
-</li>
+            {/* Aapka pehle wala mega-menu-content yahan rahega */}
 
-          {/* <li>
+
+
+
+            <li>
+              <a
+                href="https://crypgpt-token.gitbook.io/crypgpts-token/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="nav-dot"></span>
+                WhitePaper
+                <span className="nav-arrow">
+                  <PiArrowBendDownRightFill />
+                </span>
+              </a>
+            </li>
+
+            {/* <li>
             <NavLink to="/contact-us">
             <span className="nav-dot"></span>
               Contact
@@ -188,24 +188,24 @@ const toggleEcosystem = (e) => {
           </li> */}
 
 
-    <li>
-  <NavLink
-    to="/contact"
-    onClick={(e) => {
-      e.preventDefault();
-      setIsMobileMenuOpen(false);
-      setIsConsentOpen(true);
-    }}
-  >
-    <span className="nav-dot"></span>
-    Contact
-    <span className="nav-arrow">
-      <PiArrowBendDownRightFill />
-    </span>
-  </NavLink>
-</li>
+            <li>
+              <NavLink
+                to="/contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsMobileMenuOpen(false);
+                  setIsConsentOpen(true);
+                }}
+              >
+                <span className="nav-dot"></span>
+                Contact
+                <span className="nav-arrow">
+                  <PiArrowBendDownRightFill />
+                </span>
+              </NavLink>
+            </li>
 
-          {/* <li className="mobile-contact">
+            {/* <li className="mobile-contact">
             <NavLink to="/contact">
               Contact
             </NavLink>
@@ -215,72 +215,88 @@ const toggleEcosystem = (e) => {
 
           </li> */}
 
-<div className="mobile-statss mobile-contact hiden-desktop">
-  
- <a
-  href="https://bscscan.com/advanced-filter?fadd=0x0000000000000000000000000000000000000000&tadd=0x0000000000000000000000000000000000000000&tkn=0xe0ae52e75b38b605e9c879a570ee1e7bcc66254b"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="stat-pill one-pill"
->
-  <span className="fire-icon">
-    <img src={fireIcon} alt="Fire Icon" />
-  </span>
-  <div className="stat-column">
-    <span className="stat-main">13 M</span>
-    <span className="stat-sub">CRYPGPT BURNED</span>
-  </div>
-</a>
+            <div className="mobile-statss mobile-contact hiden-desktop">
 
-  <div className="stat-pill mbl-mr-btm">
-    <div className="stat-column">
-      <img src={buttonTwo} alt="Button Icon" className="buttontwo-icon" />
-      <span className="stat-status">
-        ON BOARD <span className="g-dot">●</span>
-      </span>
-    </div>
-  </div>
+              <a
+                href="https://bscscan.com/advanced-filter?fadd=0x0000000000000000000000000000000000000000&tadd=0x0000000000000000000000000000000000000000&tkn=0xe0ae52e75b38b605e9c879a570ee1e7bcc66254b"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="stat-pill one-pill"
+              >
+                <span className="fire-icon">
+                  <img src={fireIcon} alt="Fire Icon" />
+                </span>
+                <div className="stat-column">
+                  <span className="stat-main">13 M</span>
+                  <span className="stat-sub">CRYPGPT BURNED</span>
+                </div>
+              </a>
 
-</div>
+              <div className="stat-pill mbl-mr-btm">
+                <div className="stat-column">
+                  <img src={buttonTwo} alt="Button Icon" className="buttontwo-icon" />
+                  <span className="stat-status">
+                    ON BOARD <span className="g-dot">●</span>
+                  </span>
+                </div>
+              </div>
+
+            </div>
 
 
 
-        </ul>
+          </ul>
 
-        {/* Mobile Stats Inside Menu (Only <480px) */}
+          {/* Mobile Stats Inside Menu (Only <480px) */}
 
-      </nav>
+        </nav>
 
-      <div className="h-line"></div>
+        <div className="h-line"></div>
 
-   
 
-      <div className="header-stats-group desktop-btn">
-  <a
-  href="https://bscscan.com/advanced-filter?fadd=0x0000000000000000000000000000000000000000&tadd=0x0000000000000000000000000000000000000000&tkn=0xe0ae52e75b38b605e9c879a570ee1e7bcc66254b"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="stat-pill one-pill"
->
-  <span className="fire-icon">
-    <img src={fireIcon} alt="Fire Icon" />
-  </span>
-  <div className="stat-column">
-    <span className="stat-main">13 M</span>
-    <span className="stat-sub">CRYPGPT BURNED</span>
-  </div>
-</a>
 
-  <div className="stat-pill">
-    <div className="stat-column">
-    <img src={buttonTwo} alt="Button Icon" className="buttontwo-icon" />
-      <span className="stat-status">ON BOARD <span className="g-dot">●</span></span>
-    </div>
-  </div>
+        <div className="header-stats-group desktop-btn">
+          <a
+            href="https://bscscan.com/advanced-filter?fadd=0x0000000000000000000000000000000000000000&tadd=0x0000000000000000000000000000000000000000&tkn=0xe0ae52e75b38b605e9c879a570ee1e7bcc66254b"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="stat-pill one-pill"
+          >
+            <span className="fire-icon">
+              <img src={fireIcon} alt="Fire Icon" />
+            </span>
+            <div className="stat-column">
+              <span className="stat-main">13 M</span>
+              <span className="stat-sub">CRYPGPT BURNED</span>
+            </div>
+          </a>
 
-</div>
+          <div className="stat-pill">
+            <div className="stat-column">
+              <img src={buttonTwo} alt="Button Icon" className="buttontwo-icon" />
+              <span className="stat-status">ON BOARD <span className="g-dot">●</span></span>
+            </div>
+          </div>
 
-      <div
+        </div>
+
+        <div className="mobile-menu-toggle">
+          {!isMobileMenuOpen ? (
+            <HiMenuAlt1
+              size={28}
+              className="menu-icon"
+              onClick={() => setIsMobileMenuOpen(true)}
+            />
+          ) : (
+            <HiX
+              size={28}
+              className="menu-icon close-icon"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+          )}
+        </div>
+
+        {/* <div
         className="mobile-menu-toggle"
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
       >
@@ -289,22 +305,22 @@ const toggleEcosystem = (e) => {
         ) : (
           <HiMenuAlt1 size={28} className="menu-icon" />
         )}
-      </div>
-    </header>
+      </div> */}
+      </header>
 
       {/* {isEcosystemOpen && (
   <EcosystemPop onClose={() => setIsEcosystemOpen(false)} />
 )} */}
-<ConsentPopup
-  isOpen={isConsentOpen}
-  onClose={() => {
-    setIsConsentOpen(false);
-    navigate("/contact"); 
-  }}
-/>
-</>
+      <ConsentPopup
+        isOpen={isConsentOpen}
+        onClose={() => {
+          setIsConsentOpen(false);
+          navigate("/contact");
+        }}
+      />
+    </>
   );
- 
+
 }
 
 export default Header;

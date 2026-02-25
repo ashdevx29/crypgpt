@@ -186,6 +186,14 @@
   justify-content: center;
 }
 
+.move-social-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
 .move-social-item img {
   width: 55%;
   height: 55%;
