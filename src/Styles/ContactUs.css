@@ -1,0 +1,236 @@
+/* ===== SECTION BACKGROUND ===== */
+.contact-section {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at 10% 50%, #ffd70033, transparent 40%),
+              radial-gradient(circle at 90% 50%, #ffd70033, transparent 40%),
+              #000;
+  padding: 60px 20px;
+  /* margin: 0 auto; */
+}
+
+/* ===== CARD WRAPPER ===== */
+.contact-card {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+}
+
+/* ===== SVG BACKGROUND ===== */
+.contact-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== INNER CONTENT OVER SVG ===== */
+.contact-inner {
+  position: absolute;
+  inset: 0;
+  padding: 45px 60px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== TITLE ===== */
+.contact-title {
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* ===== SUBTITLE ===== */
+.contact-subtitle {
+  text-align: center;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  max-width: 600px;
+  margin-bottom: 40px;
+}
+
+/* ===== FORM ===== */
+.contact-form {
+  width: 100%;
+  max-width: 800px;
+}
+
+.form-row {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 8px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.form-group input,
+.form-group textarea {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 14px;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 12px #ffd70055;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 140px;
+}
+
+.full-width {
+  margin-bottom: 40px;
+}
+
+.send-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 400;
+  cursor: pointer;
+  background: linear-gradient(90deg, #444, #222);
+  color: #fff;
+  transition: 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+
+}
+
+.send-btn:hover {
+  background: linear-gradient(90deg, #ffd700, #c9a000);
+  color: #000;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .contact-inner {
+    padding: 50px 40px;
+  }
+}
+
+
+
+@media (max-width: 1150px) {
+  .contact-svg {
+    transform: scaleY(1.2);
+    transform-origin: top;
+  }
+
+  .contact-section {
+  min-height: 80vh;
+ 
+  justify-content: center;
+  align-items: center;
+  background: none;
+  padding: 60px 12px;
+  /* margin: 0 auto; */
+}
+
+
+}
+
+@media (max-width: 880px) {
+  .contact-svg {
+    transform: scaleY(1.5);
+    transform-origin: top;
+  }
+  .contact-title {
+ 
+  font-size: 2.5rem;
+  
+  margin-bottom: 15px;
+}
+
+/* ===== SUBTITLE ===== */
+.contact-subtitle {
+  
+  font-size: 1.2rem;
+  
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+}
+
+
+
+/* ===== MOBILE SIMPLE BOX (Hidden by default) ===== */
+.mobile-box {
+  display: none;
+}
+
+/* ===== 670px SE NEECHAY ===== */
+@media (max-width: 670px) {
+
+  /* SVG Hide */
+  .contact-svg {
+    display: none;
+  }
+.contact-section {
+        min-height: 80vh;
+       
+        padding: 20px 12px;
+       
+} 
+  /* Card ko normal background de do */
+  .contact-card {
+    background: linear-gradient(135deg, #ffd700, transparent);
+    padding: 2px;
+    border-radius: 20px;
+  }
+
+  .contact-inner {
+    position: relative;
+    background: rgba(0, 0, 0, 0.95);
+    border-radius: 20px;
+    padding: 40px 20px;
+  }
+
+    .contact-title {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+.contact-subtitle {
+  
+  font-size: 1rem;
+  text-align: left;
+  
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+  
+
+
+  .form-row {
+    flex-direction: column;
+  }
+
+}

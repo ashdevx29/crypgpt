@@ -15,11 +15,23 @@ import five from "../../assets/header-eco/five.png";
 import six from "../../assets/header-eco/six.png";
 import seven from "../../assets/header-eco/seven.png";
 import EcosystemPop from "./utils/EcosystemPop";
+import { useNavigate } from "react-router-dom";
+import ConsentPopup from "./utils/ConsentPopup";
+import { useLocation } from "react-router-dom";
+
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 const [isEcosystemOpen, setIsEcosystemOpen] = useState(false);
   const ecosystemRef = useRef(null); // Menu ko track karne ke liye ref
+  const [isConsentOpen, setIsConsentOpen] = useState(false);
+const navigate = useNavigate();
+const location = useLocation();
+
+useEffect(() => {
+  setIsEcosystemOpen(false);
+  setIsMobileMenuOpen(false);
+}, [location]);
 
   // Bahar click karne par band karne ka logic
   useEffect(() => {
@@ -37,11 +49,9 @@ const [isEcosystemOpen, setIsEcosystemOpen] = useState(false);
     };
   }, []);
 
- const toggleEcosystem = (e) => {
+const toggleEcosystem = (e) => {
   e.preventDefault();
-
-  setIsMobileMenuOpen(false);   // 🔥 Mobile menu close
-  setIsEcosystemOpen(true);     // 🔥 Full screen mega open
+  setIsEcosystemOpen(!isEcosystemOpen);
 };
 
   return (
@@ -92,15 +102,18 @@ const [isEcosystemOpen, setIsEcosystemOpen] = useState(false);
 
       <nav className={`nav-menu ${isMobileMenuOpen ? "open" : ""}`}>
         {/* <ul onClick={() => setIsMobileMenuOpen(false)}> */}
-        <ul onClick={() => setIsMobileMenuOpen(false)}>
+      <ul>
         <li>
-            <NavLink to="/">
-              <span className="nav-dot"></span>
-              Home
-              <span className="nav-arrow">
-                <PiArrowBendDownRightFill />
-              </span>
-            </NavLink>
+           <NavLink 
+  to="/" 
+  onClick={() => setIsMobileMenuOpen(false)}
+>
+  <span className="nav-dot"></span>
+  Home
+  <span className="nav-arrow">
+    <PiArrowBendDownRightFill />
+  </span>
+</NavLink>
           </li>
 
           <li>
@@ -124,26 +137,25 @@ const [isEcosystemOpen, setIsEcosystemOpen] = useState(false);
           </li> */}
 
 {/* Ecosystem Item with Ref */}
-          <li className="ecosystem-nav-item" ref={ecosystemRef}>
-            <NavLink 
-              to="/ecosystem" 
-              onClick={toggleEcosystem} 
-              className={isEcosystemOpen ? "active" : ""}
-            >
-              <span className="nav-dot"></span>
-              Ecosystem
-              <span className="nav-arrow"><PiArrowBendDownRightFill /></span>
-            </NavLink>
+      <li className="ecosystem-nav-item">
+  <a
+    href="#"
+    onClick={toggleEcosystem}
+    className="ecosystem-link"
+  >
+    <span className="nav-dot"></span>
+    Ecosystem
+    <span className={`nav-arrow mobile-arrow ${isEcosystemOpen ? "rotate" : ""}`}>
+      <PiArrowBendDownRightFill />
+    </span>
+  </a>
 
-            {/* Bada Box (Mega Menu) */}
-          
-             
- 
-
-  {/* Ye wo bada box hai jo screenshot mein dikh raha hai */}
-
-
-
+  {/* 👇 MOBILE ACCORDION CONTENT */}
+  {isEcosystemOpen && (
+    <div className="mobile-eco-dropdown">
+     <EcosystemPop onClose={() => setIsEcosystemOpen(false)} />
+    </div>
+  )}
 </li>
                
                 {/* Aapka pehle wala mega-menu-content yahan rahega */}
@@ -165,7 +177,7 @@ const [isEcosystemOpen, setIsEcosystemOpen] = useState(false);
   </a>
 </li>
 
-          <li>
+          {/* <li>
             <NavLink to="/contact-us">
             <span className="nav-dot"></span>
               Contact
@@ -173,8 +185,25 @@ const [isEcosystemOpen, setIsEcosystemOpen] = useState(false);
                 <PiArrowBendDownRightFill />
               </span>
             </NavLink>
-          </li>
+          </li> */}
 
+
+    <li>
+  <NavLink
+    to="/contact"
+    onClick={(e) => {
+      e.preventDefault();
+      setIsMobileMenuOpen(false);
+      setIsConsentOpen(true);
+    }}
+  >
+    <span className="nav-dot"></span>
+    Contact
+    <span className="nav-arrow">
+      <PiArrowBendDownRightFill />
+    </span>
+  </NavLink>
+</li>
 
           {/* <li className="mobile-contact">
             <NavLink to="/contact">
@@ -263,9 +292,16 @@ const [isEcosystemOpen, setIsEcosystemOpen] = useState(false);
       </div>
     </header>
 
-      {isEcosystemOpen && (
+      {/* {isEcosystemOpen && (
   <EcosystemPop onClose={() => setIsEcosystemOpen(false)} />
-)}
+)} */}
+<ConsentPopup
+  isOpen={isConsentOpen}
+  onClose={() => {
+    setIsConsentOpen(false);
+    navigate("/contact"); 
+  }}
+/>
 </>
   );
  

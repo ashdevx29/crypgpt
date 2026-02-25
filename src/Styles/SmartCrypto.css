@@ -212,9 +212,9 @@
 
 /* ================= LARGE SCREEN (1600px+) ================= */
 
-@media (min-width: 1300px) {
+@media (man-width: 1300px) {
   .scr-root-container {
-    padding: 600px 20px;
+    padding: 60px 20px;
   }
 
   .scr-main-title {

@@ -381,6 +381,7 @@
 @media (max-width: 1300px) {
 .cg-strategy-section {
   padding: 40px 20px 100px;
+  overflow: hidden;
 }
 
 .cg-hero-title {
