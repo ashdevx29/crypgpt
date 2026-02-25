@@ -1,20 +1,12 @@
 .scr-root-container {
   --gold: #E5AB24;
   --bg: #070707;
-
   width: 100%;
-  padding: 80px 100px;
-  /* background: radial-gradient(circle at center, #0f0f0f 0%, #070707 60%); */
+  padding: 50px 100px;
   color: #fff;
   overflow: hidden;
- 
   position: relative;
 }
-
-/* .scr-root-container {
-  position: relative;
-  overflow: hidden;
-} */
 
 /* BIG CENTER BACKGROUND LIGHT */
 .scr-root-container::before {
@@ -22,13 +14,11 @@
   position: absolute;
   width: 465px;
   height: 482px;
-  background: radial-gradient(
-    circle,
-    rgba(229, 171, 36, 0.35) 0%,
-    rgba(229, 171, 36, 0.18) 25%,
-    rgba(229, 171, 36, 0.08) 45%,
-    transparent 65%
-  );
+  background: radial-gradient(circle,
+      rgba(229, 171, 36, 0.35) 0%,
+      rgba(229, 171, 36, 0.18) 25%,
+      rgba(229, 171, 36, 0.08) 45%,
+      transparent 65%);
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
@@ -48,25 +38,24 @@
 }
 
 .scr-main-title {
+  font-family: Kanit;
+  font-weight: 400;
   font-size: 64px;
-  font-weight: 500;
-  line-height: 1.05;
-  letter-spacing: -1px;
-}
-
-.scr-white {
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
   color: #fff;
 }
 
-.scr-yellow {
+.scr-title-white {
   color: #FDF803;
 }
 
 .scr-top-desc-box {
-  max-width: 480px;
-  padding: 28px 36px;
+  max-width: 472.9px;
+  padding: 28px 28px;
   border-radius: 40px;
-  background: rgba(229, 171, 36, 0.06);
+  background: #1E1715;
   position: relative;
 }
 
@@ -90,22 +79,28 @@
 }
 
 @keyframes borderFlow {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 300% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 300% 50%;
+  }
 }
 
 .scr-top-desc-box p {
-  font-size: 17px;
-  line-height: 1.6;
-  color: #eaeaea;
-  font-weight: 300;
+  font-family: Kanit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  color: #fff;
 }
 
 /* ================= GRID ================= */
 
 .scr-content-grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr 1fr;
+  grid-template-columns: 0.9fr 1.3fr 0.9fr;
   align-items: center;
   gap: 50px;
 }
@@ -134,8 +129,9 @@
   position: relative;
   background: #000;
   padding: 26px 30px;
-  border-radius: 32px;
+  border-radius: 24px;
   overflow: hidden;
+  min-height: 220px;
 }
 
 .scr-feature-card::before {
@@ -143,7 +139,7 @@
   position: absolute;
   inset: 0;
   padding: 1.5px;
-  border-radius: 32px;
+  border-radius: 24px;
   background: linear-gradient(270deg, #110E0D, #E5AB24, #110E0D);
   background-size: 300% 300%;
   animation: cardFlow 6s linear infinite;
@@ -157,8 +153,13 @@
 }
 
 @keyframes cardFlow {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 300% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 300% 50%;
+  }
 }
 
 /* reverse animation for specific cards */
@@ -168,15 +169,25 @@
 }
 
 .scr-feature-title {
-  font-size: 24px;
-  font-weight: 500;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #FFFFFF;
   margin-bottom: 12px;
 }
 
 .scr-feature-desc {
-  font-size: 15px;
-  color: #bdbdbd;
-  line-height: 1.6;
+  color: #BDBDBD;
+  font-family: Kanit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: center;
+
 }
 
 /* ================= CENTER VIDEO ================= */
@@ -189,9 +200,10 @@
 
 .scr-video-frame-inner {
   width: 100%;
+  /* min-height: 693px; */
   max-width: 520px;
-  aspect-ratio: 4/5;
-  border-radius: 50px;
+  /* aspect-ratio: 4/5; */
+  border-radius: 40px;
   overflow: hidden;
   position: relative;
   background: #000;
@@ -201,18 +213,213 @@
 .scr-main-video {
   width: 100%;
   height: 100%;
+  min-height: 693px;
   object-fit: cover;
 }
 
 .scr-video-ambient-light {
   position: absolute;
   inset: 0;
-  box-shadow: inset 0 0 120px rgba(0,0,0,0.9);
+  box-shadow: inset 0 0 120px rgba(0, 0, 0, 0.9);
 }
+
+@media (max-width: 1300px) {
+
+  .scr-root-container {
+    padding: 60px 25px;
+  }
+}
+
+/* =======================
+   LARGE LAPTOP (1200px)
+======================= */
+@media (max-width: 1200px) {
+
+  .scr-root-container {
+    padding: 50px 20px;
+  }
+
+  .scr-main-title {
+    font-size: 54px;
+  }
+
+  .scr-content-grid {
+    gap: 40px;
+  }
+
+  .scr-main-video {
+    min-height: 800px;
+  }
+}
+
+
+/* =======================
+   TABLET (992px)
+======================= */
+@media (max-width: 1024px) {
+
+  .scr-root-container {
+    padding: 50px 15px;
+  }
+
+  .scr-header-flex {
+    /* flex-direction: column; */
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .scr-top-desc-box p {
+    font-size: 14px;
+  }
+
+  .scr-top-desc-box {
+    padding: 15px;
+    max-width: 40%;
+    border-radius: 15px;
+  }
+
+  .scr-top-desc-box::before {
+    border-radius: 15px;
+  }
+  
+
+  .scr-main-title {
+    font-size: 48px;
+  }
+
+  .scr-content-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .scr-feature-col {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .scr-feature-card {
+    width: 48%;
+    min-height: auto;
+  }
+
+  .scr-feature-title,
+  .scr-feature-desc {
+    text-align: center !important;
+  }
+
+  .scr-video-frame-inner {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .scr-main-video {
+    min-height: 520px;
+  }
+}
+
+
+/* =======================
+   MOBILE (768px)
+======================= */
+@media (max-width: 768px) {
+
+  .scr-root-container {
+    padding: 40px 12px;
+  }
+  .scr-header-flex {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .scr-main-title {
+    font-size: 36px;
+    line-height: 120%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .scr-top-desc-box {
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 90%;
+    
+  }
+
+  .scr-top-desc-box p {
+    font-size: 16px;
+  }
+
+  .scr-content-grid {
+    gap: 40px;
+  }
+
+  .scr-feature-col {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .scr-feature-card {
+    width: 100%;
+    padding: 22px;
+    border-radius: 20px;
+  }
+
+  .scr-feature-title {
+    font-size: 22px;
+  }
+
+  .scr-feature-desc {
+    font-size: 16px;
+  }
+
+  .scr-video-frame-inner {
+    max-width: 100%;
+    border-radius: 30px;
+  }
+
+  .scr-main-video {
+    min-height: 420px;
+  }
+
+  /* reduce big background glow */
+  .scr-root-container::before {
+    width: 300px;
+    height: 320px;
+    filter: blur(60px);
+  }
+}
+
+
+/* =======================
+   SMALL MOBILE (480px)
+======================= */
+@media (max-width: 480px) {
+
+  .scr-main-title {
+    font-size: 28px;
+  }
+
+  .scr-feature-title {
+    font-size: 20px;
+  }
+
+  .scr-feature-desc {
+    font-size: 14px;
+  }
+
+  .scr-main-video {
+    min-height: 350px;
+  }
+}
+
 
 /* ================= LARGE SCREEN (1600px+) ================= */
 
-@media (man-width: 1300px) {
+@media (min-width: 1300px) {
   .scr-root-container {
     padding: 60px 20px;
   }
@@ -222,7 +429,6 @@
   }
 }
 
-/* ================= TABLET ================= */
 
 @media (max-width: 1100px) {
   .scr-header-flex {
@@ -249,7 +455,6 @@
   }
 }
 
-/* ================= MOBILE ================= */
 
 @media (max-width: 600px) {
 
@@ -273,4 +478,4 @@
     padding: 22px;
     border-radius: 28px;
   }
-}
+} */

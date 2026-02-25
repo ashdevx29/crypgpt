@@ -21,24 +21,24 @@ const PartnersSection = () => {
       { id: 7, img: four },
       { id: 8, img: three },
     ],
-    "PARTNERS + BACKERS": [
+    "Our Press Release": [
   { id: 1, img: one },
       { id: 2, img: two },
       { id: 3, img: four },
     ],
-    MEDIA: [
-      { id: 4, img: three },
-    ]
+    // MEDIA: [
+    //   { id: 4, img: three },
+    // ]
   };
 
-  const tabs = ["EXCHANGES", "PARTNERS + BACKERS", "MEDIA"];
+  const tabs = ["EXCHANGES", "Our Press Release"];
 
   return (
     <div className="container">
       <div className="header-wrapper">
         {/* Left SVG */}
         <div className="svg-line">
-          <svg width="274" height="93" viewBox="0 0 274 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="274" height="80" viewBox="0 0 274 93" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 1H91.8727L166.055 92H273" stroke="url(#paint0_linear_482_1630)" strokeWidth="2" strokeLinecap="round"/>
             <defs>
               <linearGradient id="paint0_linear_482_1630" x1="273" y1="92.6842" x2="-2.50366" y2="24.7978" gradientUnits="userSpaceOnUse">
@@ -64,7 +64,7 @@ const PartnersSection = () => {
 
         {/* Right SVG */}
         <div className="svg-line">
-          <svg width="278" height="93" viewBox="0 0 278 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="278" height="80" viewBox="0 0 278 93" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M277 1H184.791L109.518 92H1" stroke="url(#paint0_linear_482_1631)" strokeWidth="2" strokeLinecap="round"/>
             <defs>
               <linearGradient id="paint0_linear_482_1631" x1="0.999987" y1="92.6842" x2="280.082" y2="22.9048" gradientUnits="userSpaceOnUse">
