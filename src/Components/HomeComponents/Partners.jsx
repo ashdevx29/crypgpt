@@ -4,6 +4,10 @@ import one from "../../assets/partners/one.png"
 import two from "../../assets/partners/two.png"
 import three from "../../assets/partners/three.png"
 import four from "../../assets/partners/four.png"
+import onee from "../../assets/partners/pressrelease/cmc.png"
+import twoo from "../../assets/partners/pressrelease/anewsweek.png"
+import threee from "../../assets/partners/pressrelease/active-feature.png"
+import fourr from "../../assets/partners/pressrelease/Editionbiz.png"
 
 
 const PartnersSection = () => {
@@ -22,9 +26,10 @@ const PartnersSection = () => {
       // { id: 8, img: three },
     ],
     "Our Press Release": [
-  { id: 1, img: one },
-      { id: 2, img: two },
-      { id: 3, img: four },
+  { id: 1, img: onee },
+      { id: 2, img: twoo },
+      { id: 3, img: three },
+       { id: 4, img: fourr },
     ],
     // MEDIA: [
     //   { id: 4, img: three },
