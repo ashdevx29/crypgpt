@@ -50,13 +50,13 @@ const Footer = () => {
               <a href="#">About</a>
               <a href="#">Token</a>
               <a href="https://crypgpt-token.gitbook.io/crypgpts-token/" target="_blank" rel="noopener noreferrer" >Whitepaper</a>
-              <a href="#">Contact Us</a>
+              <a href="/contact-us">Contact Us</a>
             </div>
             <div className="cgpt-link-column">
               <h4 className="cgpt-column-title">Resources</h4>
               <a href="#">Use Case</a>
-              <a href="#">AI ChatBot</a>
-              <a href="#">Staking</a>
+              <a href="/ai-chatbot">AI ChatBot</a>
+              <a href="/staking">Staking</a>
               <a href="#">GPT Exchange</a>
             </div>
             <div className="cgpt-link-column">
@@ -72,9 +72,9 @@ const Footer = () => {
         <div className="cgpt-footer-bottom">
           <div className="cgpt-bottom-links">
             <a href="#">About us</a>
-            <a href="#">Contact</a>
-            <a href="#">Privacy policy</a>
-            <a href="#">Terms of Use</a>
+            <a href="/contact-us">Contact</a>
+            <a href="/privacy-policy">Privacy policy</a>
+            <a href="/terms-and-conditions">Terms of Use</a>
           </div>
           <div className="cgpt-copyright">
             © 2026, All Rights Reserved
