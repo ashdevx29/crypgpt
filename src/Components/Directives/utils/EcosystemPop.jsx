@@ -6,7 +6,7 @@ import four from "../../../assets/header-eco/four.png";
 import five from "../../../assets/header-eco/five.png";
 import six from "../../../assets/header-eco/six.png";
 import seven from "../../../assets/header-eco/seven.png";
-import '../../../Styles/ecosystempop.css';
+// import '../../../Styles/ecosystempop.css';
 import { useNavigate } from "react-router-dom";
 
 function EcosystemPop({ onClose }) {
