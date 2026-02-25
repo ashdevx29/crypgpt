@@ -28,7 +28,7 @@ const PartnersSection = () => {
     "Our Press Release": [
   { id: 1, img: onee },
       { id: 2, img: twoo },
-      { id: 3, img: three },
+      { id: 3, img: threee },
        { id: 4, img: fourr },
     ],
     // MEDIA: [
