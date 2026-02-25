@@ -38,7 +38,7 @@ export default function Hero() {
           <div className="hero-buttons">
             <div className="hero-buttons">
               <a
-                href="https://bscscan.com/advanced-filter?fadd=0x0000000000000000000000000000000000000000&tadd=0x0000000000000000000000000000000000000000&tkn=0xe0ae52e75b38b605e9c879a570ee1e7bcc66254b"
+                href="https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0xe0Ae52E75b38B605E9c879a570ee1E7bCC66254B"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
