@@ -13,7 +13,7 @@ import StakingSection from "../Components/HomeComponents/Staking";
 import Partnersmarquee from "../Components/HomeComponents/Partnersmarquee";
 import MovementSection from "../Components/HomeComponents/MovementSection";
 import SmartRevolution from "../Components/HomeComponents/SmartCrypto";
-import LockInformation from "../Components/HomeComponents/LockInformation";
+// import LockInformation from "../Components/HomeComponents/LockInformation";
 function HomePage() {
   const location = useLocation();
 
@@ -75,7 +75,7 @@ function HomePage() {
         <SmartRevolution />
       </section>
 
-      <LockInformation />
+      {/* <LockInformation /> */}
 
       {/* <section id="footer">
         <Footer/>
