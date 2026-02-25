@@ -194,6 +194,7 @@ function Header() {
                 onClick={(e) => {
                   e.preventDefault();
                   setIsMobileMenuOpen(false);
+                  setIsEcosystemOpen(false);
                   setIsConsentOpen(true);
                 }}
               >
