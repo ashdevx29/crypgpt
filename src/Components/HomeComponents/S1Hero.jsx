@@ -38,7 +38,7 @@ export default function Hero() {
           <div className="hero-buttons">
             <div className="hero-buttons">
               <a
-                href="https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0xe0Ae52E75b38B605E9c879a570ee1E7bCC66254B"
+                href="https://blofin.com/spot/CRYPGPT-USDT"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
