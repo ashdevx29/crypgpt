@@ -36,10 +36,10 @@ const Footer = () => {
               Unlock smarter decisions, automated execution, and next-level trading performance.
             </p>
             <div className="cgpt-social-icons">
-              <a href="#"><img src={tw} alt=''></img></a>
-              <a href="#"><img src={fb} alt=''></img></a>
+              <a href="https://x.com/crypgpt_token"><img src={tw} alt=''></img></a>
+              <a href=""><img src={fb} alt=''></img></a>
               <a href="#"><img src={insta} alt=''></img></a>
-              <a href="#"><img src={github} alt=''></img></a>
+              <a href="https://www.instagram.com/crypgpt_token"><img src={github} alt=''></img></a>
             </div>
           </div>
 

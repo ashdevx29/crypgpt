@@ -14,7 +14,6 @@ import fivee from "../../assets/partners/svg-partner/edito.svg"
 const PartnersSection = () => {
   const [activeTab, setActiveTab] = useState('EXCHANGES');
 
-  // Yahan aap apne images ke path daal sakti hain
   const partnersData = {
     EXCHANGES: [
       { id: 1, img: one, url: "https://dex.coinmarketcap.com/token/bsc/0xc643f4dd66a10955e53e3f67a81ba54703d3b7fb/" },
