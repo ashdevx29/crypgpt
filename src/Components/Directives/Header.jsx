@@ -28,6 +28,19 @@ const [isEcosystemOpen, setIsEcosystemOpen] = useState(false);
 const navigate = useNavigate();
 const location = useLocation();
 
+// Lock body scroll when mobile menu or ecosystem is open
+useEffect(() => {
+  if (isMobileMenuOpen || isEcosystemOpen) {
+    document.body.style.overflow = "hidden"; // prevent scroll
+  } else {
+    document.body.style.overflow = "auto"; // restore scroll
+  }
+
+  return () => {
+    document.body.style.overflow = "auto"; // cleanup
+  };
+}, [isMobileMenuOpen, isEcosystemOpen]);
+
 useEffect(() => {
   setIsEcosystemOpen(false);
   setIsMobileMenuOpen(false);
@@ -188,13 +201,14 @@ const toggleEcosystem = (e) => {
           </li> */}
 
 
-    <li>
+   <li>
   <NavLink
     to="/contact"
     onClick={(e) => {
       e.preventDefault();
-      setIsMobileMenuOpen(false);
-      setIsConsentOpen(true);
+      setIsMobileMenuOpen(false);   // close mobile nav
+      setIsEcosystemOpen(false);    // <--- close ecosystem pop
+      setIsConsentOpen(true);       // open consent popup
     }}
   >
     <span className="nav-dot"></span>
