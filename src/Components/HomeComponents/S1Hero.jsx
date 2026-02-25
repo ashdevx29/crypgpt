@@ -36,7 +36,29 @@ export default function Hero() {
           </h2>
 
           <div className="hero-buttons">
-            <button className="btn-primary">
+            <div className="hero-buttons">
+              <a
+                href="https://bscscan.com/advanced-filter?fadd=0x0000000000000000000000000000000000000000&tadd=0x0000000000000000000000000000000000000000&tkn=0xe0ae52e75b38b605e9c879a570ee1e7bcc66254b"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                Buy CRYPGPT
+              </a>
+
+              <a
+                href="https://crypgpt-token.gitbook.io/crypgpts-token/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline"
+              >
+                Whitepaper
+                <span className="play-icon">
+                  <HiOutlinePlay />
+                </span>
+              </a>
+            </div>
+            {/* <button className="btn-primary">
               Buy CRYPGPT
             </button>
             <button className="btn-outline">
@@ -44,7 +66,7 @@ export default function Hero() {
               <span className="play-icon">
                 <HiOutlinePlay />
               </span>
-            </button>
+            </button> */}
           </div>
         </div>
 
