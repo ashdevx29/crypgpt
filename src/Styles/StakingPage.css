@@ -1,0 +1,742 @@
+.staking-page {
+  min-height: 100vh;
+  padding: 20px 5%;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+.staking-banner {
+  width: 100%;
+  max-width: 1240px;
+  margin: 40px auto;
+  padding: 10px 5px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000000;
+  border: 1px solid #3D3D3D;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* LEFT SECTION */
+.staking-left {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex: 1;
+  justify-content: center;
+}
+
+.logo-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Yellow Glow Background */
+.logo-section::before {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 131px;
+  background: radial-gradient(circle, rgba(255, 215, 0, 0.6) 0%, rgba(255, 215, 0, 0.25) 40%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(50px);
+  z-index: 0;
+}
+
+/* Logo Image */
+.staking-logo {
+  height: 93px;
+  width: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.divider {
+  width: 1px;
+  height: 119px;
+  background: #FFFFFF;
+}
+
+/* CONTENT */
+.staking-title {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 100%;
+  letter-spacing: 0.7px;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #e5e5e5;
+  background: linear-gradient(90deg, #EFEFEF 0%, #797979 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.staking-title span {
+  font-weight: 700;
+}
+
+.apy-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.apy {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  background: linear-gradient(90deg, #ffd700, #fff3b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+/* BUTTON */
+.limited-btn {
+  padding: 9px 26px;
+  border-radius: 24px;
+  background: transparent;
+  border: 1px solid #FDF803;
+  color: #ffffff;
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.limited-btn:hover {
+  background: #ffd700;
+  color: black;
+}
+
+/* RIGHT IMAGE */
+.staking-right img {
+  width: 227px;
+  object-fit: contain;
+}
+
+.staking-stats {
+  width: 100%;
+  max-width: 1240px;
+  margin: 20px auto;
+  padding: 20px 20px;
+  display: flex;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  background: #000000;
+  border: 1px solid #3D3D3D;
+  border-radius: 10px;
+}
+
+.stat-item {
+  padding: 0 10px;
+  text-align: left;
+  position: relative;
+}
+
+.stat-item h3 {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  letter-spacing: 0px;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.stat-item p {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  color: #99A1AF;
+  margin: 0;
+}
+
+.staked-section {
+  width: 100%;
+  max-width: 1240px;
+  margin: 60px auto;
+  color: #ffffff;
+}
+
+/* Title */
+.section-title {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  letter-spacing: 0px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+/* Table Header */
+.staked-table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  color: #99A1AF;
+  margin-bottom: 20px;
+}
+
+.staked-table-header div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Purple Info Icon */
+.info-icon {
+  font-size: 14px;
+  color: #AD46FF;
+}
+
+/* Wallet Box */
+.wallet-box {
+  background: #000000;
+  border: 1px solid #3D3D3D;
+  border-radius: 10px;
+  padding: 22px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.wallet-box p {
+  margin: 0;
+  font-family: Inter;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 24px;
+  line-height: 133%;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+
+/* Connect Button */
+.connect-btn {
+  background: linear-gradient(180deg, #FDF803 0%, #E5AB24 100%);
+  border: none;
+  padding: 10px 21px;
+  border-radius: 24px;
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 5%;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: #010101;
+}
+
+.connect-btn:hover {
+  background: #eab308;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(250, 204, 21, 0.4);
+}
+
+/* Click effect */
+.connect-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(250, 204, 21, 0.3);
+}
+
+.active-section {
+  margin-top: 70px;
+  max-width: 1240px;
+  margin: auto;
+}
+
+section-title {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  letter-spacing: 0px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.staking-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  min-width: 1000px;
+}
+
+/* HEADER */
+.staking-table thead th {
+  text-align: left;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #99A1AF;
+  padding: 0 15px 10px 15px;
+}
+
+/* 👇 New Add */
+.staking-table thead th .th-content {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  gap: 8px;
+}
+
+.info-icon {
+  font-size: 14px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.2s ease;
+}
+
+.info-icon:hover {
+  opacity: 1;
+}
+
+/* ROW */
+.staking-table tbody tr {
+  background: #000;
+  border: 1px solid #3D3D3D;
+}
+
+.staking-table tbody td {
+  padding: 18px 15px;
+  vertical-align: middle;
+}
+
+/* Rounded row look */
+.staking-table tbody tr td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.staking-table tbody tr td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* POOL CARDS */
+.pool-boxes {
+  display: flex;
+  gap: 15px;
+}
+
+.pool-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 4px 14px;
+  border-radius: 6px;
+  border: 1px solid #3D3D3D;
+  text-align: center;
+}
+
+.pool-card span {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  color: #99A1AF;
+}
+
+.mini-logo {
+  width: 111px;
+  height: 35px;
+  object-fit: contain;
+}
+
+/* CHAIN */
+.chain-icon {
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+.chain-icon img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  margin: auto;
+  display: block;
+  border-radius: 50%;
+}
+
+/* REWARD */
+
+.reward {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reward strong {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+
+.reward span {
+  font-family: Inter;
+  font-size: 12px;
+  line-height: 120%;
+  font-weight: 400;
+  color: #99A1AF;
+}
+
+/* NFT */
+.nft {
+  display: flex;
+  gap: 8px;
+}
+
+.nft-box {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #4A5565;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.nft-box::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border: 1px solid #4A5565;
+  border-radius: 50%;
+}
+
+/* CAPACITY */
+.capacity p {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0px;
+  margin-bottom: 5px;
+  color: #D1D5DC;
+}
+
+.prog-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  width: 100%;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background: #1E2939;
+  border-radius: 5px;
+}
+
+.progress-fill {
+  width: 97%;
+  height: 100%;
+  background: linear-gradient(90deg, #9810FA 0%, #AD46FF 100%);
+  border-radius: 5px;
+}
+
+.percent {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  color: #99A1AF;
+}
+
+
+@media (max-width: 1220px) {
+
+  .apy {
+    font-size: 70px;
+  }
+
+  .staking-title {
+    font-size: 32px;
+  }
+
+  .staking-left {
+    gap: 25px;
+  }
+
+  .staking-right img {
+    width: 180px;
+    object-fit: contain;
+  }
+}
+
+/* =========================================
+   LARGE TABLET (1024px)
+========================================= */
+@media (max-width: 1024px) {
+
+  .staking-left {
+    gap: 14px;
+  }
+
+  .staking-title {
+    font-size: 24px;
+  }
+
+  .apy {
+    font-size: 36px;
+  }
+
+  .staking-right img {
+    width: 165px;
+  }
+
+  .staking-stats {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .stat-item {
+    width: 45%;
+  }
+
+  .staking-table {
+    min-width: 900px;
+  }
+
+  .wallet-box p {
+    font-size: 18px;
+  }
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE (768px and below)
+========================================= */
+@media (max-width: 768px) {
+
+  .staking-page {
+    padding: 10px;
+  }
+
+  /* ================= BANNER ================= */
+  .staking-banner {
+    /* flex-direction: column; */
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 10px 15px;
+  }
+
+  .staking-logo {
+    height: 60px;
+  }
+
+  .staking-left {
+    /* flex-direction: column; */
+    gap: 20px;
+  }
+
+  .divider {
+    height: 60px;
+  }
+
+  .staking-title {
+    font-size: 20px;
+  }
+
+  .apy {
+    font-size: 24px;
+  }
+
+  .limited-btn {
+    font-size: 14px;
+    padding: 5px 12px;
+  }
+
+  .staking-right img {
+    width: 140px;
+  }
+
+  /* ================= STATS ================= */
+  .staking-stats {
+    /* flex-direction: column; */
+    gap: 12px;
+    padding: 15px;
+  }
+
+  /* .stat-item {
+    width: 100%;
+    padding: 0;
+  } */
+
+  .stat-item h3 {
+    font-size: 16px;
+  }
+
+  .stat-item p {
+    font-size: 12px;
+  }
+
+
+
+  /* ================= WALLET BOX ================= */
+  .wallet-box {
+    /* flex-direction: column; */
+    gap: 15px;
+    text-align: center;
+    padding: 18px;
+  }
+
+  .wallet-box p {
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 562px) {
+
+  .staking-banner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 15px 10px;
+  }
+
+  .staking-logo {
+    height: 60px;
+  }
+
+  .staking-left {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .staking-title {
+    font-size: 20px;
+  }
+
+  .apy {
+    font-size: 20px;
+  }
+
+  .limited-btn {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .staking-right img {
+    width: 140px;
+  }
+
+  /* ================= STATS ================= */
+  .staking-stats {
+    /* flex-direction: column; */
+    gap: 12px;
+    padding: 15px;
+  }
+
+  /* .stat-item {
+    width: 100%;
+    padding: 0;
+  } */
+
+  .stat-item h3 {
+    font-size: 14px;
+  }
+
+  .stat-item p {
+    font-size: 11px;
+  }
+
+
+
+  /* ================= WALLET BOX ================= */
+  .wallet-box {
+    /* flex-direction: column; */
+    gap: 15px;
+    text-align: center;
+    padding: 18px;
+  }
+
+  .wallet-box p {
+    font-size: 12px;
+  }
+
+  .connect-btn {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+}
+
+@media (max-width: 430px) {
+  .staking-title {
+    font-size: 18px;
+  }
+
+  .apy {
+    font-size: 16px;
+  }
+
+  .staking-stats {
+    flex-direction: column;
+    gap: 12px;
+    padding: 15px;
+  }
+
+  .stat-item {
+        width: 90%;
+    }
+      .wallet-box {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    padding: 18px;
+  }
+
+}

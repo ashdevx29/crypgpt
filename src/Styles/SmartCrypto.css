@@ -1,146 +1,141 @@
 .scr-root-container {
-  --scr-gold: #e5ab24;
-  --scr-dark-bg: #070707;
-  --scr-card-inner: #121212;
-  --scr-border-color: #252525;
-  
-  background-color: transparent;
-  padding: 60px 10%;
-  color: #ffffff;
-  min-height: 100vh;
+  --gold: #E5AB24;
+  --bg: #070707;
+
+  width: 100%;
+  padding: 80px 100px;
+  /* background: radial-gradient(circle at center, #0f0f0f 0%, #070707 60%); */
+  color: #fff;
+  overflow: hidden;
+ 
+  position: relative;
 }
 
-/* Header Section */
+/* .scr-root-container {
+  position: relative;
+  overflow: hidden;
+} */
+
+/* BIG CENTER BACKGROUND LIGHT */
+.scr-root-container::before {
+  content: "";
+  position: absolute;
+  width: 465px;
+  height: 482px;
+  background: radial-gradient(
+    circle,
+    rgba(229, 171, 36, 0.35) 0%,
+    rgba(229, 171, 36, 0.18) 25%,
+    rgba(229, 171, 36, 0.08) 45%,
+    transparent 65%
+  );
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+/* ================= HEADER ================= */
+
 .scr-header-flex {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 60px;
+  gap: 60px;
+  margin-bottom: 80px;
 }
 
 .scr-main-title {
-  font-size: 60px;
-  font-weight: 400;
-  line-height: 1.1;
-  text-transform: uppercase;
-  max-width: 471px;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -1px;
 }
 
-.scr-title-white{
+.scr-white {
+  color: #fff;
+}
+
+.scr-yellow {
   color: #FDF803;
 }
+
 .scr-top-desc-box {
-  position: relative;
-  max-width: 450px;
-  padding: 25px 30px;
+  max-width: 480px;
+  padding: 28px 36px;
   border-radius: 40px;
-  background: rgba(229, 171, 36, 0.05);
-  z-index: 1;
+  background: rgba(229, 171, 36, 0.06);
+  position: relative;
 }
 
-/* Gradient Border Layer */
+/* animated border */
 .scr-top-desc-box::before {
   content: "";
   position: absolute;
   inset: 0;
-  padding: 2px; /* border thickness */
+  padding: 2px;
   border-radius: 40px;
-  background: linear-gradient(
-    270deg,
-    #110E0D,
-    #E5AB24,
-    #110E0D
-  );
+  background: linear-gradient(270deg, #110E0D, #E5AB24, #110E0D);
   background-size: 300% 300%;
   animation: borderFlow 6s linear infinite;
 
-  /* Mask to show only border */
-  -webkit-mask: 
-    linear-gradient(#000 0 0) content-box, 
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-
   pointer-events: none;
 }
 
-/* Animation */
 @keyframes borderFlow {
   0% { background-position: 0% 50%; }
   100% { background-position: 300% 50%; }
 }
 
 .scr-top-desc-box p {
-  font-size: 18px;
-  line-height: 1.2;
-  color: #fff;
-  margin: 0;
-  font-weight: 200;
-  letter-spacing: 0%;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #eaeaea;
+  font-weight: 300;
 }
 
-/* Grid Layout */
+/* ================= GRID ================= */
+
 .scr-content-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
   align-items: center;
-  gap: 30px;
+  gap: 50px;
 }
 
-/* Side Feature Cards */
+/* ================= FEATURE COLUMN ================= */
+
+.scr-feature-col {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* LEFT column align left */
+.scr-feature-col:first-child .scr-feature-card {
+  text-align: left;
+}
+
+/* RIGHT column align right */
+.scr-feature-col:last-child .scr-feature-card {
+  text-align: right;
+}
+
+/* ================= FEATURE CARD ================= */
+
 .scr-feature-card {
   position: relative;
   background: #000;
-  padding:12px 30px;
-  border-radius: 30px;
-  margin-bottom: 15px;
-  text-align: center;
-  z-index: 1;
+  padding: 26px 30px;
+  border-radius: 32px;
   overflow: hidden;
-  
-}
-
-/* Animated Gradient Border */
-.scr-feature-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: 1.5px; /* border thickness */
-  border-radius: 30px;
-  background: linear-gradient(
-    270deg,
-    #110E0D,
-    #E5AB24,
-    #110E0D
-  );
-  background-size: 300% 300%;
-  animation: cardBorderFlow 6s linear infinite;
-
-  /* Show only border */
-  -webkit-mask:
-    linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-
-  pointer-events: none;
-}
-
-/* Animation */
-@keyframes cardBorderFlow {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 300% 50%; }
-}
-
-.scr-feature-card:hover {
-  border-color: var(--scr-gold);
-}
-
-.scr-feature-card {
-  position: relative;
-  border-radius: 30px;
-  overflow: hidden;
-  z-index: 1;
 }
 
 .scr-feature-card::before {
@@ -148,14 +143,11 @@
   position: absolute;
   inset: 0;
   padding: 1.5px;
-  border-radius: 30px;
-  background: linear-gradient(
-    270deg,
-    #110E0D,
-    #E5AB24,
-    #110E0D
-  );
+  border-radius: 32px;
+  background: linear-gradient(270deg, #110E0D, #E5AB24, #110E0D);
   background-size: 300% 300%;
+  animation: cardFlow 6s linear infinite;
+
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
@@ -164,71 +156,121 @@
   pointer-events: none;
 }
 
-/* Both Opposite to Feature Card */
+@keyframes cardFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+
+/* reverse animation for specific cards */
 .scr-global-card::before,
 .scr-secure-card::before {
-  animation: cardBorderFlowReverse 6s linear infinite;
+  animation-direction: reverse;
 }
-
-/* Reverse Animation */
-@keyframes cardBorderFlowReverse {
-  0% { background-position: 300% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 
 .scr-feature-title {
-  font-size: 28px;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 500;
   margin-bottom: 12px;
-  max-width: 250px;
-  line-height: 100%;
 }
 
 .scr-feature-desc {
-  font-size: 18px;
-  color: #BDBDBD;
-  line-height: 1.3;
-  max-width: 270px;
-  text-align: center;
+  font-size: 15px;
+  color: #bdbdbd;
+  line-height: 1.6;
 }
 
-/* Center Video Frame */
+/* ================= CENTER VIDEO ================= */
+
 .scr-video-portal {
-  position: relative;
-  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .scr-video-frame-inner {
-  position: relative;
   width: 100%;
-  max-width: 500px;
-  aspect-ratio: 1/1.2; /* Match the vertical look of the SS */
+  max-width: 520px;
+  aspect-ratio: 4/5;
   border-radius: 50px;
   overflow: hidden;
+  position: relative;
   background: #000;
+  box-shadow: 0 0 80px rgba(229, 171, 36, 0.15);
 }
 
 .scr-main-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
 .scr-video-ambient-light {
   position: absolute;
   inset: 0;
-  box-shadow: inset 0 0 100px rgba(0,0,0,0.8);
-  pointer-events: none;
+  box-shadow: inset 0 0 120px rgba(0,0,0,0.9);
 }
 
-/* Responsive */
+/* ================= LARGE SCREEN (1600px+) ================= */
+
+@media (min-width: 1300px) {
+  .scr-root-container {
+    padding: 600px 20px;
+  }
+
+  .scr-main-title {
+    font-size: 76px;
+  }
+}
+
+/* ================= TABLET ================= */
+
 @media (max-width: 1100px) {
-  .scr-main-title { font-size: 40px; }
-  .scr-header-flex { flex-direction: column; gap: 30px; }
-  .scr-content-grid { grid-template-columns: 1fr; }
-  .scr-video-portal { order: -1; margin-bottom: 40px; }
+  .scr-header-flex {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .scr-content-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .scr-video-portal {
+    order: -1;
+  }
+
+  .scr-feature-col:first-child .scr-feature-card,
+  .scr-feature-col:last-child .scr-feature-card {
+    text-align: center;
+  }
+
+  .scr-main-title {
+    font-size: 44px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+  .scr-root-container {
+    padding: 60px 20px;
+  }
+
+  .scr-main-title {
+    font-size: 32px;
+  }
+
+  .scr-feature-card {
+    padding: 22px;
+  }
+
+  .scr-video-frame-inner {
+    border-radius: 30px;
+  }
+
+  .scr-top-desc-box {
+    padding: 22px;
+    border-radius: 28px;
+  }
 }

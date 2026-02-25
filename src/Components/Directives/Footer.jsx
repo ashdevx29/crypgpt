@@ -49,7 +49,7 @@ const Footer = () => {
               <h4 className="cgpt-column-title">Company</h4>
               <a href="#">About</a>
               <a href="#">Token</a>
-              <a href="#">Whitepaper</a>
+              <a href="https://crypgpt-token.gitbook.io/crypgpts-token/" target="_blank" rel="noopener noreferrer" >Whitepaper</a>
               <a href="#">Contact Us</a>
             </div>
             <div className="cgpt-link-column">

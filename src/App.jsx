@@ -3,6 +3,8 @@ import Homepage from './Pages/Homepage'
 import Header from './Components/Directives/Header'; 
 import Footer from './Components/Directives/Footer'; 
 import './App.css'
+import AiChatbotPage from "./Pages/Ecosystem/AiChatbotPage";
+import StakingPage from "./Pages/Ecosystem/StakingPage";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 
@@ -14,6 +16,8 @@ function App() {
         <Header /> 
         <Routes>
           <Route path="/" element={<Homepage />} />
+          <Route path="/ai-chatbot" element={<AiChatbotPage />} />
+          <Route path="/staking" element={<StakingPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
 
