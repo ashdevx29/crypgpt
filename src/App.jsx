@@ -9,7 +9,12 @@ import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 import Dashboard from "./Pages/Ecosystem/Dashboard";
 import ContactUs from "./Pages/ContactUs";
-
+import Disclaimer from "./Pages/Disclaimer";
+import Token from "./Pages/Token";
+import UseCase from "./Pages/UseCase";
+import DaoGovernance from "./Pages/Ecosystem/DaoGovernance";
+import Crypgatway from "./Pages/Ecosystem/Crypgatway";
+import Exchange from "./Pages/Ecosystem/Exchange";
 function App() {
 
   return (
@@ -17,7 +22,7 @@ function App() {
        <BrowserRouter>
         <Header /> 
         <Routes>
-          <Route path="/" element={<Homepage />} />
+       <Route path="/" element={<Homepage />} />
           <Route path="/ai-chatbot" element={<AiChatbotPage />} />
           <Route path="/staking" element={<StakingPage />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
@@ -25,6 +30,11 @@ function App() {
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/dao-governance" element={<DaoGovernance />} />
+          <Route path="/crypgateways" element={<Crypgatway />} />
+           <Route path="/exchange" element={<Exchange />} />
+          <Route path="/token" element={<Token />} />
+          <Route path="/usecase" element={<UseCase />} />
 
 
         </Routes>
