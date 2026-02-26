@@ -2,8 +2,8 @@ import React from 'react';
 import '../../Styles/Footer.css';
 import logo from "../../assets/footer/logo.png"
 import tw from "../../assets/footer/1.png"
-import fb from "../../assets/footer/2.png"
-import insta from "../../assets/footer/4.png"
+import fb from "../../assets/footer/medi.png"
+import insta from "../../assets/footer/tele.png"
 import github from "../../assets/footer/logo-instagram 1.png"
 
 
@@ -36,10 +36,10 @@ const Footer = () => {
               Unlock smarter decisions, automated execution, and next-level trading performance.
             </p>
             <div className="cgpt-social-icons">
-              <a href="https://x.com/crypgpt_token"><img src={tw} alt=''></img></a>
-              <a href=""><img src={fb} alt=''></img></a>
-              <a href="#"><img src={insta} alt=''></img></a>
-              <a href="https://www.instagram.com/crypgpt_token"><img src={github} alt=''></img></a>
+              <a href="https://x.com/crypgpt_token"  target="_blank" rel="noopener noreferrer"><img src={tw} alt=''></img></a>
+              <a href="https://medium.com/@crypgpt_token" target="_blank" rel="noopener noreferrer"><img src={fb} alt=''></img></a>
+              <a href="https://t.me/crypgptcommunity" target="_blank" rel="noopener noreferrer"><img src={insta} alt=''></img></a>
+              <a href="https://www.instagram.com/crypgpt_token" target="_blank" rel="noopener noreferrer  "><img src={github} alt=''></img></a>
             </div>
           </div>
 
