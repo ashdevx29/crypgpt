@@ -110,7 +110,7 @@ function EcosystemPop({ onClose }) {
               <div className="mega-item">
                 <div className="mega-icon"><img src={seven} alt="Burn Dashboard" /></div>
                 <div className="mega-text">
-                  <h4 onClick={() => goTo("/burn-dashboard")} className="clickable-heading">
+                  <h4 onClick={() => goTo("/dashboard")} className="clickable-heading">
                     Burn Dashboard
                   </h4>
                 </div>
