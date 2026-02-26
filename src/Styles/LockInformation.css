@@ -328,3 +328,41 @@
         height: 110px;
     }
 }
+
+@media (max-width: 480px) {
+   .locked-content p {
+    font-size: 15px;
+}
+.locked-content h4{
+    font-size: 1rem;
+}
+.supply-text{
+    font-size: 20px;
+        margin-top: 20px;
+}
+.supply-card {
+    
+    padding:  26px;
+}
+
+.icon-box {
+   
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+.info-box p {
+    
+    font-size: 20px;
+
+}
+.info-box h4 {
+    margin-top: 8px;
+    font-size: 1rem;
+}
+.lock-title {
+margin-bottom: 25px;
+}
+
+
+}

@@ -64,7 +64,7 @@ function EcosystemPop({ onClose }) {
               <div className="mega-item">
                 <div className="mega-icon"><img src={one} alt="Use Case" /></div>
                 <div className="mega-text">
-                  <h4 onClick={() => goTo("/use-case")} className="clickable-heading">
+                  <h4 onClick={() => goTo("/usecase")} className="clickable-heading">
                     Use Case
                   </h4>
                 </div>

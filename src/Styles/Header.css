@@ -389,7 +389,7 @@
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.5);
-  z-index: 900;
+  z-index: 999999;
 }
 
 .buttontwo-icon {
@@ -478,7 +478,7 @@
 .ecosystem-desc {
   font-size: 14px;
   line-height: 1.6;
-  color: #ccc;
+  color: #FFFFFF;
   margin-bottom: 30px;
   max-width: 450px;
 }

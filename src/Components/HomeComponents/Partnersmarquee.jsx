@@ -21,7 +21,7 @@ const Partnersmarquee = () => {
   const logoSources = [...baseLogos, ...baseLogos];
 
   return (
-    <section className="gx-pure-image-marquee">
+    <section className="gx-pure-image-marquee ">
       <div className="gx-marquee-viewport">
         <div className="gx-marquee-track">
           {[...logoSources, ...logoSources].map((item, index) => (

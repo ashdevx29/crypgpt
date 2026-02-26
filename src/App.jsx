@@ -9,6 +9,8 @@ import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 import Dashboard from "./Pages/Ecosystem/Dashboard";
 import ContactUs from "./Pages/ContactUs";
+import UseCase from "./Pages/UseCase";
+import Token from "./Pages/Token";
 
 function App() {
 
@@ -24,6 +26,8 @@ function App() {
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/usecase" element={<UseCase/>} />
+          <Route path="/token" element={<Token />} />
 
 
         </Routes>
