@@ -46,7 +46,15 @@ const PrivacyPolicy = () => {
 
 
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-yellow-900/40 via-black/80 to-black/95" />
+      <div
+                className="absolute inset-0"
+                style={{
+                    background: `
+      radial-gradient(circle at 10% 10%, rgba(255, 215, 0, 0.25) 0%, transparent 50%),
+      #000
+    `,
+                }}
+            />
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl px-6 py-20 text-left">

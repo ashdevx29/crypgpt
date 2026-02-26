@@ -8,57 +8,75 @@ const CgptStrategy = () => {
   const roadmap = [
     // 2026 DATA
     {
-      year: "2026",
-      heroTitle: { line1: "Foundation of", line2: "Intelligence" },
-      phase: "Q1 2026",
-      title: "Genesis Phase",
-      desc: ["Official Token Launch", "Website & Whitepaper Release", "Global Community Activation", "Listings on CoinMarketCap, CoinGecko, Coin360 & CoinBubble"],
+      year: "2025",
+      heroTitle: { line1: "Foundation &  ", line2: "Market Entry" },
+      phase: "Q3 2025",
+      title: "Public Launch & Ecosystem Foundation",
+      desc: ["Token Launch", "Official Website & Whitepaper Release", "Global Community Building Campaign", "Listings on CMC, CoinGecko, Coin360 & CoinBubble"],
       // footer: "Laying the digital cornerstone.",
       thumb: phase1
     },
     {
-      year: "2026",
-      heroTitle: { line1: "Foundation of", line2: "Intelligence" },
-      phase: "Q2 2026",
-      title: "Expansion Protocol",
-      desc: ["Token Launch on Blofin Exchange", "AI Trading Signal Assistant Launch", "Telegram AI Bot Integration", "Strategic Global Partnerships", "Tier-2 Exchange Listing", "Cyberscope Smart Contract Audit"],
+      year: "2025",
+      heroTitle: { line1: "Foundation &  ", line2: "Market Entry" },
+      phase: "Q4 2025",
+      title: "Exchange Listings & AI Rollout",
+      desc: ["Blofin Dextrade ", "Audit Report Published", "Cyberscope Smart Contract Audit", "AI Trading Signal Assistant Launch", "Telegram AI Bot Integration", "Strategic Partnerships", "Additional Tier-2 Exchange Listing" ],
       // footer: "Security. Utility. Momentum.",
       thumb: phase2
     },
     {
       year: "2026",
-      heroTitle: { line1: "Foundation of", line2: "Intelligence" },
-      phase: "Q3 2026",
-      title: "Intelligence Acceleration",
-      desc: ["AI Portfolio Management System", "Multi-Language AI Chatbot (Beta)", "CertiK Smart Contract Audit", "Tier-1 Exchange Listing"],
+      heroTitle: { line1: "Expansion & ", line2: "Infrastructure Growth" },
+      phase: "Q1 2026",
+      title: "AI Intelligence & Tier Expansion",
+      desc: ["WEEX, MEXC, and Biconomy exchange listings.", "AI Portfolio Management Tool Launch", "Multi-Language CrypGPT Chatbot (Beta)", "Multi-Language CrypGPT Chatbot (Beta)", "CertiK Smart Contract Audit", "Global Community Expansion"],
       // footer: "Institutional-grade credibility.",
       thumb: phase3
     },
     {
       year: "2026",
-      heroTitle: { line1: "Foundation of", line2: "Intelligence" },
-      phase: "Q4 2026",
-      title: "Infrastructure Domination",
-      desc: ["CrypGPT Crypto Card (Fiat + Crypto Payments)", "AI-Powered Fraud Detection System (Live)", "AI-Based Centralized Exchange Launch"],
+      heroTitle: { line1: "Expansion & ", line2: "Infrastructure Growth" },
+      phase: "Q2 2026",
+      title: "Payments & Advanced AI Systems",
+      desc: ["Crypto Card Launch (Fiat + Crypto Payments)", "AI Fraud Detection System Goes Live", "AI-Based Centralized Exchange Launch", "CrypGateways Payment Expansion"],
       // footer: "From token to financial network.",
       thumb: phase1
     },
     // 2027 DATA
     {
+      year: "2026",
+      heroTitle: { line1: "Expansion & ", line2: "Infrastructure Growth" },
+      phase: "Q3 2026",
+      title: "Utility & Engagement Layer",
+      desc: ["Move-to-Earn + Chat-to-Earn Rollout", "Decentralized Knowledge Hub (Alpha)", "Large-Scale AI Marketplace Launch", "Staking Platform Launch"],
+      // footer: "Expanding the AI frontier.",
+      thumb: phase2
+    },
+    {
+      year: "2026",
+      heroTitle: { line1: "Expansion & ", line2: "Infrastructure Growth" },
+      phase: "Q4 2026",
+      title: "Full Ecosystem Maturity",
+      desc: ["Complete Ecosystem Integration", "Additional Top-Tier Exchange Listings", "1M+ Users Milestone", "Global Institutional Partnerships"],
+      // footer: "The future is autonomous.",
+      thumb: phase3
+    },
+    {
       year: "2027",
-      heroTitle: { line1: "Ecosystem ", line2: "Supremacy" },
+      heroTitle: { line1: "Global Scale &  ", line2: "Decentralized Evolution" },
       phase: "Q1 2027",
-      title: "Behavioral Economy Layer",
-      desc: ["Move-to-Earn + Chat-to-Earn Rollout", "Decentralized Knowledge Hub (Alpha)", "Large-Scale AI Marketplace Launch"],
+      title: "Governance & DeFi Expansion",
+      desc: ["DAO Governance Full Implementation", "Advanced On-Chain Analytics Dashboard", "Cross-Chain Integration (Multi-Blockchain Support)", "Institutional Crypto Payment Solutions"],
       // footer: "Expanding the AI frontier.",
       thumb: phase2
     },
     {
       year: "2027",
-      heroTitle: { line1: "Ecosystem", line2: "Supremacy" },
+      heroTitle: { line1: "Global Scale &  ", line2: "Decentralized Evolution" },
       phase: "Q2 2027",
-      title: "Mass Adoption Era",
-      desc: ["Full Ecosystem Expansion", "Top-Tier Global Exchange Listings", "1M+ Active Users in the CrypGPT Ecosystem"],
+      title: "Global Adoption & AI Evolution",
+      desc: ["AI 2.0 Upgrade (Self-Learning Market Intelligence Engine)", "Global Merchant Network Expansion via CrypGateways", "2M+ Users Milestone", "Strategic Global Technology Partnerships"],
       // footer: "The future is autonomous.",
       thumb: phase3
     }
@@ -136,7 +154,7 @@ const CgptStrategy = () => {
             <path d="M6 373 L20 365 L20 369 L6 377 Z" fill="url(#paint2_v)" />
 
 
-            <foreignObject x="25" y="30" width="295" height="400">
+            <foreignObject x="30" y="30" width="295" height="405">
               <div className="v-hud-inner" xmlns="http://www.w3.org/1999/xhtml">
                 <div className="v-hud-image-box">
                   <img src={active.thumb} alt={active.title} />
@@ -160,8 +178,6 @@ const CgptStrategy = () => {
               <linearGradient id="paint0_v" x1="354" y1="367.431" x2="256.987" y2="367.431" gradientUnits="userSpaceOnUse"><stop stopColor="#FDF803" /><stop offset="1" stopColor="#E5AB24" /></linearGradient>
               <linearGradient id="paint1_v" x1="177.224" y1="32.5177" x2="0.999756" y2="32.5177" gradientUnits="userSpaceOnUse"><stop stopColor="#FDF803" /><stop offset="1" stopColor="#E5AB24" /></linearGradient>
               <linearGradient id="paint2_v" x1="344.549" y1="126.757" x2="333.869" y2="126.757" gradientUnits="userSpaceOnUse"><stop stopColor="#FDF803" /><stop offset="1" stopColor="#E5AB24" /></linearGradient>
-
-
 
             </defs>
           </svg>

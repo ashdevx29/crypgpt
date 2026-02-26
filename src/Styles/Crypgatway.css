@@ -1,0 +1,534 @@
+.crypgateway-container {
+    position: relative;
+    background: #0A0A0A;
+    /* min-height: 100vh; */
+    padding: 70px 100px;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+}
+
+/* ABSOLUTE BACKGROUND IMAGE */
+.cryp-bg {
+    position: absolute;
+    top: 40px;
+    left: 160px;
+    width: 750px;
+    opacity: 0.8;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.crypgateway-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* LEFT SIDE */
+.cryp-left {
+    width: 52%;
+}
+
+.cryp-sub {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: #E6E6E6;
+    margin-bottom: 20px;
+}
+
+.cryp-heading {
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 110%;
+    letter-spacing: 0%;
+    color: #F5F2EA;
+    margin-bottom: 40px;
+}
+
+.cryp-heading span {
+    background: linear-gradient(180deg, #FDF803 0%, #E5AB24 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cryp-desc {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 60px;
+}
+
+.yellow-bar {
+    width: 8px;
+    background: linear-gradient(180deg, #FDF803 0%, #E5AB24 100%);
+}
+
+.cryp-desc p {
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0%;
+    color: #F5F2EA;
+    max-width: 450px;
+}
+
+.cryp-stats {
+    display: flex;
+    gap: 80px;
+}
+
+.cryp-stats p {
+    color: #F5F2EA;
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.cryp-stats h2 {
+    font-family: Lato;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 130%;
+    letter-spacing: 0%;
+
+    color: #E6E6E6;
+}
+
+/* RIGHT SIDE */
+.cryp-right {
+    position: relative;
+    width: 520px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================= SECURE BADGE ================= */
+
+.secure-box {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    background: linear-gradient(180deg, #FDF803 0%, #E5AB24 100%);
+    padding: 12px 18px;
+    border-radius: 21px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    color: #000;
+    z-index: 2;
+}
+
+.shield {
+    background: linear-gradient(180deg, #FDF803 0%, #E5AB24 100%);
+    box-shadow: 0px 4px 14px 0px #FFC085BD;
+    width: 73px;
+    height: 66px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    color: #000;
+}
+
+
+.secure-box h4 {
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    color: #0A0A0A;
+}
+
+.secure-box span {
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #000000;
+}
+
+/* ================= MARKETS CARD ================= */
+
+.markets-box {
+    position: absolute;
+    top: 0px;
+    right: 120px;
+    width: 343px;
+    height: 496px;
+    z-index: 1;
+}
+
+.markets-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ================= WALLET CARD ================= */
+
+.wallet-boxx {
+    position: absolute;
+    bottom: -40px;
+    left: -60px;
+    width: 260px;
+    padding: 30px 25px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    box-shadow: 0px 25px 60px rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    z-index: 2;
+}
+
+.wa-head {
+    font-family: Lato;
+    font-style: Bold;
+    font-size: 24px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Convert Row */
+
+.convert-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.btc-tag {
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #fff;
+}
+
+.swap-icon {
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.usd-text {
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #E6E6E6;
+}
+
+.eth {
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #fff;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.eth-icon {
+    margin: 0 4px;
+    color: #E6E6E6;
+}
+
+.wallet-btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(180deg, #FDF803 0%, #E5AB24 100%);
+    color: #0A0A0A;
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.wallet-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+@media (max-width: 1300px) {
+.crypgateway-container {
+    padding: 70px 25px;
+}
+.cryp-heading {
+    font-size: 48px;
+}
+}
+
+@media (max-width: 1100px) {
+
+    
+.crypgateway-container {
+    padding: 70px 15px;
+}
+
+  /* ===== Main Layout Stack ===== */
+  .crypgateway-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .cryp-heading {
+    font-size: 60px;
+}
+
+
+
+  .cryp-left,
+  .cryp-right {
+    width: 100%;
+  }
+
+  .cryp-left {
+    text-align: center;
+  }
+
+  .cryp-desc {
+    justify-content: center;
+  }
+
+  .yellow-bar {
+    display: none;
+  }
+
+  .cryp-desc p {
+    max-width: 700px;
+  }
+
+  .cryp-stats {
+    justify-content: center;
+    gap: 60px;
+  }
+
+  /* ===== Background Image Adjust ===== */
+  .cryp-bg {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    top: 80px;
+  }
+
+  /* ===== Right Section Layout Reset ===== */
+  .cryp-right {
+    height: auto;
+    min-height: 600px;
+  }
+
+  /* Secure Badge */
+  .secure-box {
+    top: 40px;
+    right: 35%;
+    transform: translateX(50%);
+  }
+
+  /* Markets Card Center */
+  .markets-box {
+    position: relative;
+    top: unset;
+    right: unset;
+    margin: 0 auto;
+    width: 320px;
+    height: auto;
+  }
+
+  /* Wallet Card */
+  .wallet-boxx {
+    position: absolute;
+    bottom: 0px;
+    left: 40%;
+    transform: translateX(-50%);
+  }
+
+  
+}
+
+@media (max-width: 768px) {
+
+  .crypgateway-container {
+    padding: 40px 12px;
+  }
+
+  .cryp-heading {
+    font-size: 36px;
+    line-height: 120%;
+    margin-bottom: 15px;
+  }
+
+  .cryp-stats h2 {
+    font-size: 40px;
+  }
+
+  .cryp-desc {
+    margin-bottom: 20px;
+  }
+
+  .cryp-right {
+    min-height: 520px;
+  }
+
+    .secure-box {
+    top: 40px;
+    right: 25%;
+    transform: translateX(50%);
+  }
+
+  /* Markets Card Center */
+  .markets-box {
+    position: relative;
+    top: unset;
+    right: unset;
+    margin: 0 auto;
+    width: 280px;
+    height: auto;
+  }
+
+  /* Wallet Card */
+  .wallet-boxx {
+    position: absolute;
+    bottom: -20px;
+    left: 27%;
+    transform: translateX(-50%);
+  }
+  .shield {
+    width: 55px;
+    height: 55px;
+    font-size: 28px;
+  }
+
+  .secure-box h4 {
+    font-size: 18px;
+  }
+
+  .secure-box span {
+    font-size: 14px;
+  }
+
+  .wallet-btn {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 450px) {
+  .secure-box {
+    top: 70px;
+    right: 25%;
+    transform: translateX(50%);
+    padding: 8px;
+    gap: 5px;
+    border-radius: 10px;
+  }
+
+  .cryp-bg {
+    display: none;
+  }
+
+.shield {
+    box-shadow: 0px 2px 7px 0px #FFC085BD;
+    width: 40px;
+    height: 36px;
+    border-radius: 8px;
+    color: #000;
+    font-size: 20px;
+}
+
+
+.secure-box h4 {
+    font-size: 14px;
+}
+
+.secure-box span {
+    font-size: 10px;
+}
+
+  /* Markets Card Center */
+  .markets-box {
+    position: relative;
+    top: unset;
+    right: unset;
+    margin: 0 auto;
+    width: 240px;
+    height: auto;
+  }
+
+  /* Wallet Card */
+  .wallet-boxx {
+    width: 150px;
+    border-radius: 16px;
+    position: absolute;
+    bottom: 50px;
+    left: 21%;
+    transform: translateX(-50%);
+    padding: 8px;
+  }
+
+  .wa-head {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Convert Row */
+
+.convert-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.btc-tag {
+    font-size: 13px;
+}
+
+.swap-icon {
+    font-size: 10px;
+}
+
+.usd-text {
+    font-size: 13px;
+}
+
+.eth {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.eth-icon {
+    margin: 0 4px;
+    color: #E6E6E6;
+}
+
+.wallet-btn {
+    padding: 6px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+}
+
+
+

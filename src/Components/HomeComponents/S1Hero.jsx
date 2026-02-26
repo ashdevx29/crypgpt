@@ -47,7 +47,7 @@ export default function Hero() {
               </a>
 
               <a
-                href="https://crypgpt-token.gitbook.io/crypgpts-token/"
+                href="https://crypgpt-9x2fp4n.gamma.site/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline"
@@ -58,15 +58,6 @@ export default function Hero() {
                 </span>
               </a>
             </div>
-            {/* <button className="btn-primary">
-              Buy CRYPGPT
-            </button>
-            <button className="btn-outline">
-              Whitepaper
-              <span className="play-icon">
-                <HiOutlinePlay />
-              </span>
-            </button> */}
           </div>
         </div>
 

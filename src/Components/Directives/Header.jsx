@@ -165,7 +165,7 @@ function Header() {
 
             <li>
               <a
-                href="https://crypgpt-token.gitbook.io/crypgpts-token/"
+                href="https://crypgpt-9x2fp4n.gamma.site/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -47,23 +47,24 @@ const Footer = () => {
           <div className="cgpt-links-grid">
             <div className="cgpt-link-column">
               <h4 className="cgpt-column-title">Company</h4>
-              <a href="#">About</a>
-              <a href="#">Token</a>
-              <a href="https://crypgpt-token.gitbook.io/crypgpts-token/" target="_blank" rel="noopener noreferrer" >Whitepaper</a>
+              <a href="/crypgateways">Crypgatway</a>
+              <a href="/token">Token</a>
+              <a href="https://crypgpt-9x2fp4n.gamma.site/" target="_blank" rel="noopener noreferrer" >Whitepaper</a>
               <a href="/contact-us">Contact Us</a>
             </div>
             <div className="cgpt-link-column">
               <h4 className="cgpt-column-title">Resources</h4>
-              <a href="#">Use Case</a>
+              <a href="/usecase">Use Case</a>
               <a href="/ai-chatbot">AI ChatBot</a>
               <a href="/staking">Staking</a>
-              <a href="#">GPT Exchange</a>
+              <a href="/exchange">GPT Exchange</a>
             </div>
             <div className="cgpt-link-column">
               <h4 className="cgpt-column-title">Help</h4>
               <a href="#">Customer Support</a>
               <a href="/terms-and-conditions">Terms & Conditions</a>
               <a href="/privacy-policy">Privacy Policy</a>
+              <a href="/disclaimer">Disclaimer</a>
             </div>
           </div>
         </div>
