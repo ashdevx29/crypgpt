@@ -3,6 +3,11 @@ import '../../Styles/Roadmap.css';
 import phase1 from "../../assets/roadmap/phase1.png";
 import phase2 from "../../assets/roadmap/phase2.png";
 import phase3 from "../../assets/roadmap/pre-two.png";
+import aisystem from "../../assets/roadmap/Advanced AI Systems.png"
+import ai from "../../assets/roadmap/Payments & Advanced AI Systems.png"
+import utility from "../../assets/roadmap/Utility & Engagement Layer.png"
+import eco from "../../assets/roadmap/Full Ecosystem Maturity.png"
+import defi from "../../assets/roadmap/Expansion & Infrastructure Growth.png"
 
 const CgptStrategy = () => {
   const roadmap = [
@@ -32,7 +37,7 @@ const CgptStrategy = () => {
       title: "AI Intelligence & Tier Expansion",
       desc: ["WEEX, MEXC, and Biconomy exchange listings.", "AI Portfolio Management Tool Launch", "Multi-Language CrypGPT Chatbot (Beta)", "Multi-Language CrypGPT Chatbot (Beta)", "CertiK Smart Contract Audit", "Global Community Expansion"],
       // footer: "Institutional-grade credibility.",
-      thumb: phase3
+      thumb: aisystem
     },
     {
       year: "2026",
@@ -41,7 +46,7 @@ const CgptStrategy = () => {
       title: "Payments & Advanced AI Systems",
       desc: ["Crypto Card Launch (Fiat + Crypto Payments)", "AI Fraud Detection System Goes Live", "AI-Based Centralized Exchange Launch", "CrypGateways Payment Expansion"],
       // footer: "From token to financial network.",
-      thumb: phase1
+      thumb: ai
     },
     // 2027 DATA
     {
@@ -51,7 +56,7 @@ const CgptStrategy = () => {
       title: "Utility & Engagement Layer",
       desc: ["Move-to-Earn + Chat-to-Earn Rollout", "Decentralized Knowledge Hub (Alpha)", "Large-Scale AI Marketplace Launch", "Staking Platform Launch"],
       // footer: "Expanding the AI frontier.",
-      thumb: phase2
+      thumb: utility
     },
     {
       year: "2026",
@@ -60,7 +65,7 @@ const CgptStrategy = () => {
       title: "Full Ecosystem Maturity",
       desc: ["Complete Ecosystem Integration", "Additional Top-Tier Exchange Listings", "1M+ Users Milestone", "Global Institutional Partnerships"],
       // footer: "The future is autonomous.",
-      thumb: phase3
+      thumb: eco
     },
     {
       year: "2027",
@@ -69,7 +74,7 @@ const CgptStrategy = () => {
       title: "Governance & DeFi Expansion",
       desc: ["DAO Governance Full Implementation", "Advanced On-Chain Analytics Dashboard", "Cross-Chain Integration (Multi-Blockchain Support)", "Institutional Crypto Payment Solutions"],
       // footer: "Expanding the AI frontier.",
-      thumb: phase2
+      thumb: defi
     },
     {
       year: "2027",
@@ -158,7 +163,6 @@ const CgptStrategy = () => {
               <div className="v-hud-inner" xmlns="http://www.w3.org/1999/xhtml">
                 <div className="v-hud-image-box">
                   <img src={active.thumb} alt={active.title} />
-                  <span className="v-hud-tag">{active.title.toUpperCase()}</span>
                 </div>
                 <h3 className="v-hud-title">{active.title}</h3>
 

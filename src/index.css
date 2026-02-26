@@ -11,3 +11,8 @@ body {
   overflow-y: auto;
   font-family: "Kanit", sans-serif;
 }
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}

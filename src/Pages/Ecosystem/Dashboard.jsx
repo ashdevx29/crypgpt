@@ -62,27 +62,26 @@ function StatCard({ img, symbol, name, price, change, data }) {
           <div className="text-s text-gray-400 ">{symbol}</div>
           <div className="text-white text-lg max-w-[100px] ">{name}</div>
 
-          
+
         </div>
 
       </div>
       <div className="flex flex-col gap-1 mt-1">
-  {/* PRICE */}
-  <span className="text-white font-bold text-m jetbrains">
-    {price}
-  </span>
+        {/* PRICE */}
+        <span className="text-white font-bold text-m jetbrains">
+          {price}
+        </span>
 
-  {/* CHANGE */}
-  <span
-    className={`text-s font-medium inter ${
-      isPositive ? "text-green-400" : "text-red-400"
-    }`}
-  >
-    {isPositive ? "+" : ""}
-    {change}%
-  </span>
-  
-</div>
+        {/* CHANGE */}
+        <span
+          className={`text-s font-medium inter ${isPositive ? "text-green-400" : "text-red-400"
+            }`}
+        >
+          {isPositive ? "+" : ""}
+          {change}%
+        </span>
+
+      </div>
 
       {/* Right Mini Graph */}
       <div className="w-24 h-12">
@@ -107,11 +106,10 @@ function StatCard({ img, symbol, name, price, change, data }) {
 function FeatureCard({ title, desc, highlight }) {
   return (
     <div
-      className={`rounded-xl p-5 border transition cursor-pointer ${
-        highlight
+      className={`rounded-xl p-5 border transition cursor-pointer ${highlight
           ? "bg-gradient-to-br from-yellow-500/20 to-yellow-700/10 border-yellow-500"
           : "bg-[#111] border-gray-800 hover:border-yellow-500"
-      }`}
+        }`}
     >
       <h4 className="text-white font-semibold">{title}</h4>
       <p className="text-gray-400 text-sm mt-1">{desc}</p>
@@ -125,7 +123,62 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-black text-white p-6 ">
       {/* ================= TOP CRYPTO CARDS ================= */}
-      <div className="stat-cards-marquee-container mb-8">
+      {/* ================= TOP CRYPTO AUTO SLIDER ================= */}
+      <div className="relative w-full overflow-hidden mb-8">
+
+        {/* Left Gradient */}
+        <div className="absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-black to-transparent pointer-events-none" />
+
+        {/* Right Gradient */}
+        <div className="absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-black to-transparent pointer-events-none" />
+
+        <div className="flex gap-6 w-max 
+                animate-[marquee_30s_linear_infinite] 
+                hover:[animation-play-state:paused]">
+
+          {[1, 2].map((_, i) => (
+            <React.Fragment key={i}>
+              <StatCard
+                img={img3}
+                symbol="NEAR"
+                name="Near Protocol"
+                price="1.01"
+                change={-4.33}
+                data={sparkDown}
+              />
+
+              <StatCard
+                img={img4}
+                symbol="CrypGPT"
+                name="CrypGPT AI"
+                price="0.01"
+                change={6.27}
+                data={sparkUp}
+              />
+
+              <StatCard
+                img={img1}
+                symbol="RNDR"
+                name="Render"
+                price="1.42"
+                change={-3.55}
+                data={sparkDown}
+              />
+
+              <StatCard
+                img={img2}
+                symbol="ETH"
+                name="Ethereum"
+                price="2450.11"
+                change={1.22}
+                data={sparkUp}
+              />
+            </React.Fragment>
+          ))}
+
+        </div>
+      </div>
+      {/* <div className="stat-cards-marquee-container flex-row mb-8">
         <div className="stat-cards-marquee">
           <StatCard
             img={img3}
@@ -146,7 +199,7 @@ export default function Dashboard() {
           />
 
           <StatCard
-            img={img4}
+            img={img1}
             symbol="RNDR"
             name="Render"
             price="1.42 "
@@ -163,70 +216,36 @@ export default function Dashboard() {
             data={sparkUp}
           />
 
-          {/* Duplicate cards for seamless loop */}
-          <StatCard
-            img={img3}
-            symbol="NEAR"
-            name="Near Protocol"
-            price="1.01"
-            change={-4.33}
-            data={sparkDown}
-          />
-
-          <StatCard
-            img={img4}
-            symbol="CrypGPT"
-            name="CrypGPT AI"
-            price="0.01"
-            change={6.27}
-            data={sparkUp}
-          />
-
-          <StatCard
-            img={img4}
-            symbol="RNDR"
-            name="Render"
-            price="1.42 USDT"
-            change={-3.55}
-            data={sparkDown}
-          />
-
-          <StatCard
-            img={img2}
-            symbol="ETH"
-            name="Ethereum"
-            price="2450.11"
-            change={1.22}
-            data={sparkUp}
-          />
+          
+          
         </div>
-      </div>
+      </div> */}
 
       {/* ================= MIDDLE SECTION ================= */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
         {/* Main Chart */}
         <div className="lg:col-span-2 bg-[#111] border border-gray-800 rounded-xl p-6">
-       <div className="flex items-center justify-between mb-4">
-  
-  {/* Left Side */}
-  <h3 className="text-lg inter font-semibold flex items-center gap-2">
-    All Time Burn
-    <IoMdInformationCircleOutline className="text-gray-400 cursor-pointer text-[22px]" />
-  </h3>
+          <div className="flex items-center justify-between mb-4">
 
-  {/* Right Side Buttons */}
-  <div className="flex bg-black rounded-xl p-1">
-    {["YEAR", "MONTH", "WEEK", "DAY"].map((item, index) => (
-      <button
-        key={index}
-        className="px-4 py-1 text-sm text-gray-300 rounded-lg hover:bg-[#3F3F46] transition-all duration-200"
-      >
-        {item}
-      </button>
-    ))}
-  </div>
+            {/* Left Side */}
+            <h3 className="text-lg inter font-semibold flex items-center gap-2">
+              All Time Burn
+              <IoMdInformationCircleOutline className="text-gray-400 cursor-pointer text-[22px]" />
+            </h3>
 
-</div>
+            {/* Right Side Buttons */}
+            <div className="flex bg-black rounded-xl p-1">
+              {["YEAR", "MONTH", "WEEK", "DAY"].map((item, index) => (
+                <button
+                  key={index}
+                  className="px-4 py-1 text-sm text-gray-300 rounded-lg hover:bg-[#3F3F46] transition-all duration-200"
+                >
+                  {item}
+                </button>
+              ))}
+            </div>
+
+          </div>
           <div className="h-64">
             <ResponsiveContainer width="100%" height="150%">
               <LineChart data={chartData}>
@@ -287,7 +306,7 @@ export default function Dashboard() {
 
 
 
-        
+
       </div>
 
       {/* ================= BOTTOM FEATURES ================= */}

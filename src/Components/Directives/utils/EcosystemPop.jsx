@@ -21,7 +21,6 @@ function EcosystemPop({ onClose }) {
   // Helper function → popup band + navigate
   const goTo = (path) => {
     handleClose();
-    // Optional: thoda delay daal sakte ho agar closing animation hai
     setTimeout(() => {
       navigate(path);
     }, 120);
