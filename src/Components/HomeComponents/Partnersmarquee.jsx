@@ -5,6 +5,9 @@ import two from "../../assets/partners/svg-partner/coingecko.svg";
 import three from "../../assets/partners/svg-partner/mexc.svg";
 import four from "../../assets/partners/svg-partner/pancakeswap.svg";
 import five from "../../assets/partners/svg-partner/phantom.svg";
+import blofin from "../../assets/partners/partner/BloFin 1.png";
+import coinscope from "../../assets/partners/partner//Coinscope 1.png";
+import blockspot from "../../assets/partners/partner/cropped-blockspot-logo-white.png 1.png";
 
 const Partnersmarquee = () => {
 
@@ -13,8 +16,11 @@ const Partnersmarquee = () => {
     { img: one, link: "https://dex.coinmarketcap.com/token/bsc/0xc643f4dd66a10955e53e3f67a81ba54703d3b7fb/" },
     { img: two, link: "https://www.coingecko.com/en/coins/crypgpt" },
     { img: three, link: "https://www.mexc.com/exchange/CRYPGPT_USDT" },
-        { img: four, link: "https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0xe0Ae52E75b38B605E9c879a570ee1E7bCC66254B&chain=bsc" },
+    { img: four, link: "https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0xe0Ae52E75b38B605E9c879a570ee1E7bCC66254B&chain=bsc" },
     { img: five, link: "https://phantom.com/tokens/base/0xd04519aee0128f2c1407b88096e6c8b0d5980f84" },
+    { img: blofin, link: "https://blofin.com/spot/en/CRYPGPT-USDT" },
+    { img: coinscope, link: "https://www.coinscope.co/coin/crypgpt" },
+    { img: blockspot, link: "https://blockspot.io/coin/crypgpt-token/" },
   ];
 
   // Duplicate for smooth infinite marquee
@@ -26,15 +32,15 @@ const Partnersmarquee = () => {
         <div className="gx-marquee-track">
           {[...logoSources, ...logoSources].map((item, index) => (
             <div className="gx-marquee-slot" key={index}>
-              <a 
-                href={item.link} 
-                target="_blank" 
+              <a
+                href={item.link}
+                target="_blank"
                 rel="noopener noreferrer"
               >
-                <img 
-                  src={item.img} 
-                  alt="Partner Logo" 
-                  className="gx-partner-img" 
+                <img
+                  src={item.img}
+                  alt="Partner Logo"
+                  className="gx-partner-img"
                 />
               </a>
             </div>

@@ -92,7 +92,7 @@ function EcosystemPop({ onClose }) {
               <div className="mega-item">
                 <div className="mega-icon"><img src={six} alt="GPT Exchange" /></div>
                 <div className="mega-text">
-                  <h4 onClick={() => goTo("/gpt-exchange")} className="clickable-heading">
+                  <h4 onClick={() => goTo("/exchange")} className="clickable-heading">
                     GPT Exchange
                   </h4>
                 </div>
