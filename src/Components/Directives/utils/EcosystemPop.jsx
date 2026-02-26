@@ -58,7 +58,7 @@ function EcosystemPop({ onClose }) {
               </div>
             </div>
 
-            {/* RIGHT SIDE */}
+           
             <div className="mega-right">
 
               <div className="mega-item">
