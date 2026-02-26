@@ -161,7 +161,8 @@
   border-color: #FDF803;
   color: #FDF803;
   box-shadow: 0 0 15px rgba(253, 248, 3, 0.5);
-  margin-left: -40px;
+  /* margin-left: -40px; */
+    transform: translateX(-20px); 
 }
 /* Center HUD */
 .cg-center-frame {
