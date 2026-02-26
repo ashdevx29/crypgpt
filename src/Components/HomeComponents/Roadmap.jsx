@@ -12,53 +12,53 @@ const CgptStrategy = () => {
       heroTitle: { line1: "Foundation of", line2: "Intelligence" },
       phase: "Q1 2026",
       title: "Genesis Phase",
-      desc: ["Official Token Launch", "Website & Whitepaper Release", "Global Community Activation", "Listings on CMC & CoinGecko"],
+      desc: ["Official Token Launch", "Website & Whitepaper Release", "Global Community Activation", "Listings on CoinMarketCap, CoinGecko, Coin360 & CoinBubble"],
       // footer: "Laying the digital cornerstone.",
       thumb: phase1
     },
     {
       year: "2026",
-      heroTitle: { line1: "ANALYZE. EXECUTE.", line2: "GROW." },
+      heroTitle: { line1: "Foundation of", line2: "Intelligence" },
       phase: "Q2 2026",
       title: "Expansion Protocol",
-      desc: ["Blofin Exchange Launch", "AI Trading Signal Assistant", "Telegram AI Bot Integration", "Cyberscope Smart Contract Audit"],
+      desc: ["Token Launch on Blofin Exchange", "AI Trading Signal Assistant Launch", "Telegram AI Bot Integration", "Strategic Global Partnerships", "Tier-2 Exchange Listing", "Cyberscope Smart Contract Audit"],
       // footer: "Security. Utility. Momentum.",
       thumb: phase2
     },
     {
       year: "2026",
-      heroTitle: { line1: "ANALYZE. EXECUTE.", line2: "GROW." },
+      heroTitle: { line1: "Foundation of", line2: "Intelligence" },
       phase: "Q3 2026",
       title: "Intelligence Acceleration",
-      desc: ["AI Portfolio Management System", "Multi-Language AI Chatbot", "CertiK Smart Contract Audit", "Tier-1 Exchange Listing"],
+      desc: ["AI Portfolio Management System", "Multi-Language AI Chatbot (Beta)", "CertiK Smart Contract Audit", "Tier-1 Exchange Listing"],
       // footer: "Institutional-grade credibility.",
       thumb: phase3
     },
     {
       year: "2026",
-      heroTitle: { line1: "ANALYZE. EXECUTE.", line2: "GROW." },
+      heroTitle: { line1: "Foundation of", line2: "Intelligence" },
       phase: "Q4 2026",
       title: "Infrastructure Domination",
-      desc: ["CrypGPT Crypto Card Launch", "AI Fraud Detection System", "AI-Based CEX Launch", "Full-stack AI Financial Network"],
+      desc: ["CrypGPT Crypto Card (Fiat + Crypto Payments)", "AI-Powered Fraud Detection System (Live)", "AI-Based Centralized Exchange Launch"],
       // footer: "From token to financial network.",
       thumb: phase1
     },
     // 2027 DATA
     {
       year: "2027",
-      heroTitle: { line1: "DOMINATE. SCALE.", line2: "SUPREMACY." },
+      heroTitle: { line1: "Ecosystem ", line2: "Supremacy" },
       phase: "Q1 2027",
-      title: "Ecosystem Supremacy",
-      desc: ["CrypGPT Mainnet Alpha Launch", "AI-Driven DeFi Lending Protocol", "Cross-Chain AI Bridge Integration", "Global Institutional Partnerships"],
+      title: "Behavioral Economy Layer",
+      desc: ["Move-to-Earn + Chat-to-Earn Rollout", "Decentralized Knowledge Hub (Alpha)", "Large-Scale AI Marketplace Launch"],
       // footer: "Expanding the AI frontier.",
       thumb: phase2
     },
     {
       year: "2027",
-      heroTitle: { line1: "DOMINATE. SCALE.", line2: "SUPREMACY." },
+      heroTitle: { line1: "Ecosystem", line2: "Supremacy" },
       phase: "Q2 2027",
-      title: "Autonomous Future",
-      desc: ["DAO Governance Activation", "AI Agent Marketplace Launch", "Mobile App Full Release", "Strategic Global Expansion"],
+      title: "Mass Adoption Era",
+      desc: ["Full Ecosystem Expansion", "Top-Tier Global Exchange Listings", "1M+ Active Users in the CrypGPT Ecosystem"],
       // footer: "The future is autonomous.",
       thumb: phase3
     }
@@ -128,22 +128,12 @@ const CgptStrategy = () => {
 
 
 
-{/* ===== LEFT SIDE 5 DIAGONAL STRIPES ===== */}
 
-{/* <path d="M18 228 L34 220 L34 224 L18 232 Z" fill="url(#paint2_v)" />
-<path d="M18 240 L34 232 L34 236 L18 244 Z" fill="url(#paint2_v)" />
-<path d="M18 252 L34 244 L34 248 L18 256 Z" fill="url(#paint2_v)" />
-<path d="M18 264 L34 256 L34 260 L18 268 Z" fill="url(#paint2_v)" />
-<path d="M18 276 L34 268 L34 272 L18 280 Z" fill="url(#paint2_v)" /> */}
-            {/* ===== LEFT SIDE 5 DIAGONAL STRIPES (Adjusted Position) ===== */}
-
-{/* ===== LEFT SIDE 5 DIAGONAL STRIPES (Final Adjusted) ===== */}
-
-<path d="M6 325 L20 318 L20 321 L6 329 Z" fill="url(#paint2_v)" />
-<path d="M6 337 L20 329 L20 333 L6 341 Z" fill="url(#paint2_v)" />
-<path d="M6 349 L20 341 L20 345 L6 353 Z" fill="url(#paint2_v)" />
-<path d="M6 361 L20 353 L20 357 L6 365 Z" fill="url(#paint2_v)" />
-<path d="M6 373 L20 365 L20 369 L6 377 Z" fill="url(#paint2_v)" />
+            <path d="M6 325 L20 318 L20 321 L6 329 Z" fill="url(#paint2_v)" />
+            <path d="M6 337 L20 329 L20 333 L6 341 Z" fill="url(#paint2_v)" />
+            <path d="M6 349 L20 341 L20 345 L6 353 Z" fill="url(#paint2_v)" />
+            <path d="M6 361 L20 353 L20 357 L6 365 Z" fill="url(#paint2_v)" />
+            <path d="M6 373 L20 365 L20 369 L6 377 Z" fill="url(#paint2_v)" />
 
 
             <foreignObject x="25" y="30" width="295" height="400">
