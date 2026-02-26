@@ -4,6 +4,8 @@ import img2 from "../../assets/Dashboard/dash2.png";
 import img3 from "../../assets/Dashboard/dash3.png";
 import img4 from "../../assets/Dashboard/dash4.png";
 import { IoMdInformationCircleOutline } from "react-icons/io";
+import D2Section from "../../Components/DashboardComponents/D2Section"
+import D3Section from "../../Components/DashboardComponents/D3Section"
 
 import {
   LineChart,
@@ -103,26 +105,12 @@ function StatCard({ img, symbol, name, price, change, data }) {
 
 /* ================= FEATURE CARD ================= */
 
-function FeatureCard({ title, desc, highlight }) {
-  return (
-    <div
-      className={`rounded-xl p-5 border transition cursor-pointer ${highlight
-          ? "bg-gradient-to-br from-yellow-500/20 to-yellow-700/10 border-yellow-500"
-          : "bg-[#111] border-gray-800 hover:border-yellow-500"
-        }`}
-    >
-      <h4 className="text-white font-semibold">{title}</h4>
-      <p className="text-gray-400 text-sm mt-1">{desc}</p>
-    </div>
-  );
-}
 
 /* ================= DASHBOARD ================= */
 
 export default function Dashboard() {
   return (
-    <div className="min-h-screen bg-black text-white p-6 ">
-      {/* ================= TOP CRYPTO CARDS ================= */}
+    <div className="min-h-screen bg-black text-white p-4  sm:p-8  lg:p-12  ">
       {/* ================= TOP CRYPTO AUTO SLIDER ================= */}
       <div className="relative w-full overflow-hidden mb-8">
 
@@ -178,62 +166,20 @@ export default function Dashboard() {
 
         </div>
       </div>
-      {/* <div className="stat-cards-marquee-container flex-row mb-8">
-        <div className="stat-cards-marquee">
-          <StatCard
-            img={img3}
-            symbol="NEAR"
-            name="Near Protocol"
-            price="1.01"
-            change={-4.33}
-            data={sparkDown}
-          />
-
-          <StatCard
-            img={img4}
-            symbol="CrypGPT"
-            name="CrypGPT AI"
-            price="0.01"
-            change={6.27}
-            data={sparkUp}
-          />
-
-          <StatCard
-            img={img1}
-            symbol="RNDR"
-            name="Render"
-            price="1.42 "
-            change={-3.55}
-            data={sparkDown}
-          />
-
-          <StatCard
-            img={img2}
-            symbol="ETH"
-            name="Ethereum"
-            price="2450.11"
-            change={1.22}
-            data={sparkUp}
-          />
-
-          
-          
-        </div>
-      </div> */}
 
       {/* ================= MIDDLE SECTION ================= */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
-        {/* Main Chart */}
+      {/* <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+        
         <div className="lg:col-span-2 bg-[#111] border border-gray-800 rounded-xl p-6">
           <div className="flex items-center justify-between mb-4">
 
-            {/* Left Side */}
+           
             <h3 className="text-lg inter font-semibold flex items-center gap-2">
               All Time Burn
               <IoMdInformationCircleOutline className="text-gray-400 cursor-pointer text-[22px]" />
             </h3>
 
-            {/* Right Side Buttons */}
+           
             <div className="flex bg-black rounded-xl p-1">
               {["YEAR", "MONTH", "WEEK", "DAY"].map((item, index) => (
                 <button
@@ -270,7 +216,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Right Side Boxes */}
+        
         <div className="flex flex-col gap-6">
           <div className="bg-[#111] border border-gray-800 rounded-xl p-6">
             <h4 className="text-gray-400 text-sm">Total Time Burned</h4>
@@ -307,25 +253,13 @@ export default function Dashboard() {
 
 
 
-      </div>
+      </div> */}
+
+       <D2Section />
 
       {/* ================= BOTTOM FEATURES ================= */}
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-        <FeatureCard title="Agent Forge" desc="AI Agent Marketplace" />
-        <FeatureCard title="AI Marketplace" desc="AI Ecosystem" />
-        <FeatureCard title="Compute Marketplace" desc="Cloud Solutions" />
-        <FeatureCard title="CrypGPT PAD" desc="AI Launchpad" />
-        <FeatureCard
-          title="AI Agent TapHub"
-          desc="AI Agent Game"
-          highlight
-        />
-        <FeatureCard title="VPN Subscriptions" desc="Privacy Tools" />
-        <FeatureCard
-          title="CrypGPT Debit Card"
-          desc="Decentralized Transactions"
-        />
-      </div>
+      <D3Section />
+     
     </div>
   );
 }
