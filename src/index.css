@@ -3,7 +3,6 @@
 
 body {
   background: #110E0D;
-  /* background: radial-gradient(circle at left, #3a2600 0%, #000 40%); */
   margin: 0px;
   padding: 0px;
   color: #FFFFFF;
@@ -15,4 +14,12 @@ body {
 @keyframes marquee {
   0% { transform: translateX(0%); }
   100% { transform: translateX(-50%); }
+}
+
+.inter {
+  font-family: Inter;
+}
+
+.jet {
+  font-family: JetBrains Mono;
 }

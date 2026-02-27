@@ -2,7 +2,6 @@
   position: relative;
   width: 100%;
   min-height: 140vh;
- 
   overflow: hidden;
   color: white;
   width: 95%;
@@ -12,13 +11,25 @@
 /* BIG LEFT BACKGROUND TEXT */
 .bg-text1 {
   position: absolute;
-  left: -30%;
+  left: -25%;
   top: 50%;
-  transform: translateY(-50%) rotate(-90deg);
-  font-size: 250px;
+  transform: translateY(-50%) rotate(90deg);
+  font-size: 220px;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.04);
-  letter-spacing: 10px;
+   background: linear-gradient(
+    90deg,
+    #110E0D 0%,
+    #423531 49.5%,
+    #110E0D 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  
+   font-family: 'Kanit', sans-serif;
+  font-weight: 400;
 }
 
 /* RIGHT BLUR BACKGROUND IMAGE */
@@ -35,6 +46,8 @@
   opacity: 0.25;
   z-index: 0;
 }
+
+
 
 .crypto-wrapper {
   position: relative;
@@ -189,7 +202,7 @@
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -438,4 +451,66 @@
 
 .usecase-marquuee{
 padding: 10px 0;
+}
+.image-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* BASE */
+.animated-img {
+  width: 500px;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  animation-fill-mode: both;
+}
+
+/* 1ST IMAGE – Niche se */
+.slide-0 {
+  animation-name: slideFromBottom;
+}
+
+/* 2ND IMAGE – Upar se */
+.slide-1 {
+  animation-name: slideFromTop;
+}
+
+/* 3RD IMAGE – Right Bottom se */
+.slide-2 {
+  animation-name: slideFromRightBottom;
+}
+
+/* KEYFRAMES */
+
+@keyframes slideFromBottom {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromTop {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRightBottom {
+  from {
+    transform: translate(20px, 40px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
 }

@@ -152,7 +152,7 @@
   height: 100%;
 }
  .token-left {
-    z-index: 999;
+    z-index: 1;
  }
 }
 
@@ -180,13 +180,13 @@
     position: static;
     transform: none;
     order: 2;
-    z-index: 999;
+    z-index: 1;
 
   }
 
   .token-center img {
     width: 320px;
-    z-index: 999;
+    z-index: 1;
   }
 
   /* ⭐ LEFT WRAPPER */
@@ -197,7 +197,7 @@
     align-items: center;
     gap: 3px;
     order: 2;
-    z-index: 998;
+    z-index: 1;
   }
 
   /* ⭐ RIGHT WRAPPER */
@@ -251,7 +251,7 @@
   }
  .token-center img {
     width: 250px;
-    z-index: 9999;
+    z-index: 1;
   }
 }
 .token-dist {

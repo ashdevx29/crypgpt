@@ -1,5 +1,5 @@
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   /* overflow: hidden; */
   overflow: visible;
@@ -100,7 +100,7 @@
 
 
 .hero-wrapper {
-  width: 80%;
+  width: 86%;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -154,6 +154,10 @@
   text-transform: uppercase;
   margin-bottom: 30px;
   color: #fff;
+}
+
+.hero-heading span {
+  color: #FDF803;
 }
 
 .hero-buttons {
@@ -238,7 +242,7 @@
   position: relative;
   width: 100%;
   max-width: 488px;
-  left: -50px;
+  left: -5px;
   top: 56px;
   z-index: 2;
 }
@@ -248,8 +252,8 @@
   position: absolute;
   width: 520px;
   height: 520px;
-  top: 52%;
-  left: 44%;
+  top: 53%;
+  left: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
@@ -297,6 +301,8 @@
   font-size: 45px;
   color: #FDF803;
 }
+
+
 
 /* EXACT ANGLES MATCHING YOUR CURRENT VISUAL POSITIONS */
 
@@ -368,7 +374,7 @@
   -webkit-text-fill-color: transparent;
   font-family: Kanit;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 19px;
   line-height: 120%;
   text-align: center;
   vertical-align: middle;
@@ -404,7 +410,7 @@
   font-size: 28px;
 }
 
-.divider {
+.dividerr {
   width: 1px;
   height: 44px;
   background: #FDF803;
@@ -421,7 +427,7 @@
   font-size: 40px;
   line-height: 100%;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #FDF803;
   margin-bottom: 8px;
 }
 
@@ -799,6 +805,7 @@
     height: 40px;
     font-size: 18px;
   }
+
 }
 
 
@@ -913,8 +920,8 @@
     font-size: 16px;
   }
 
-  .divider {
+  /* .divider {
     height: 30px;
-  }
+  } */
 
 }

@@ -51,7 +51,7 @@ function Header() {
 
   const toggleEcosystem = (e) => {
     e.preventDefault();
-    setIsEcosystemOpen(!isEcosystemOpen);
+    setIsEcosystemOpen(prev => !prev);
   };
 
   return (
@@ -78,7 +78,7 @@ function Header() {
             </span>
             <div className="stat-column">
               <span className="stat-main">13 M</span>
-              <span className="stat-sub">CRYPGPT BURNED</span>
+              <span className="stat-sub">CRYPGPT </span>
             </div>
           </a>
 
@@ -116,7 +116,7 @@ function Header() {
               </NavLink>
             </li>
 
-            <li>
+            {/* <li>
               <NavLink to="/token">
                 <span className="nav-dot"></span>
                 Token
@@ -124,7 +124,7 @@ function Header() {
                   <PiArrowBendDownRightFill />
                 </span>
               </NavLink>
-            </li>
+            </li> */}
 
             {/* <li>
             <NavLink to="/ecosystem">
@@ -137,7 +137,7 @@ function Header() {
           </li> */}
 
             {/* Ecosystem Item with Ref */}
-            <li className="ecosystem-nav-item">
+            <li className="ecosystem-nav-item" ref={ecosystemRef}>
               <a
                 href="#"
                 onClick={toggleEcosystem}
@@ -145,7 +145,11 @@ function Header() {
               >
                 <span className="nav-dot"></span>
                 Ecosystem
-                <span className={`nav-arrow mobile-arrow ${isEcosystemOpen ? "rotate" : ""}`}>
+                {/* <span className={`nav-arrow mobile-arrow ${isEcosystemOpen ? "rotate" : ""}`}> */}
+                <span
+                  className={`nav-arrow ecosystem-arrow  ${isEcosystemOpen ? "rotate-open" : ""
+                    }`}
+                >
                   <PiArrowBendDownRightFill />
                 </span>
               </a>
@@ -160,7 +164,15 @@ function Header() {
 
             {/* Aapka pehle wala mega-menu-content yahan rahega */}
 
-
+              <li>
+              <NavLink to="/token">
+                <span className="nav-dot"></span>
+                Token
+                <span className="nav-arrow">
+                  <PiArrowBendDownRightFill />
+                </span>
+              </NavLink>
+            </li>
 
 
             <li>
@@ -229,7 +241,7 @@ function Header() {
                 </span>
                 <div className="stat-column">
                   <span className="stat-main">13 M</span>
-                  <span className="stat-sub">CRYPGPT BURNED</span>
+                  <span className="stat-sub">CRYPGPT</span>
                 </div>
               </a>
 
@@ -268,7 +280,7 @@ function Header() {
             </span>
             <div className="stat-column">
               <span className="stat-main">13 M</span>
-              <span className="stat-sub">CRYPGPT BURNED</span>
+              <span className="stat-sub">CRYPGPT</span>
             </div>
           </a>
 
