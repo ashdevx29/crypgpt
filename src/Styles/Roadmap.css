@@ -142,7 +142,8 @@
 .cg-nav-group {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+  margin-left: 20px;
 }
 
 .cg-arrow-btn {
@@ -348,9 +349,12 @@
 }
 
   .cg-hero-title {
-    font-size: 56px;
+    font-size: 42px;
   }
 
+  .cg-info-pill {
+    padding: 20px;
+  }
 
 }
 
@@ -361,7 +365,8 @@
   }
 
   .cg-hero-title {
-    font-size: 48px;
+    font-size: 36px;
+    line-height: 130%;
   }
 
   .line1 {
@@ -396,6 +401,10 @@
 
   .cg-nav-group {
     flex-direction: row;
+    gap: 40px;
+    justify-content: start;
+    margin-left: 40px;
+    padding: 5px;
   }
 
   .cg-right-preview {
@@ -410,9 +419,7 @@
     margin-left: 0;
   }
 
-  .cg-nav-group {
-    justify-content: center;
-  }
+
 }
 
 @media (max-width: 768px) {
@@ -425,7 +432,7 @@
   }
 
   .cg-hero-title {
-    font-size: 32px;
+    font-size: 40px;
     text-align: center;
 
   }
@@ -439,11 +446,31 @@
     text-align: center;
     color: #FDF803;
   }
+
+  .cg-phase-display {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.cg-arrow-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+}
 }
 
 @media (max-width: 446px) { 
   .cg-info-pill {
     width: 100%;
     flex-direction: column;
+  }
+   .cg-hero-title {
+    font-size: 26px;
+    text-align: center;
+
+  }
+  .cg-phase-display {
+    font-size: 20px;
+    margin-bottom: 15px;
   }
 }

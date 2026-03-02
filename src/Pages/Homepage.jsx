@@ -3,7 +3,8 @@ import { useEffect } from "react";
 
 import S1Hero from "../Components/HomeComponents/S1Hero";
 import Ecosystem from "../Components/HomeComponents/Ecosystem";
-import Future from "../Components/HomeComponents/Future";
+// import Future from "../Components/HomeComponents/Future";
+import AboutSection from "../Components/HomeComponents/AboutSection"
 import Discover from "../Components/HomeComponents/Discover";
 import Roadmap from "../Components/HomeComponents/Roadmap";
 import PartnersSection from "../Components/HomeComponents/Partners";
@@ -48,9 +49,11 @@ function HomePage() {
         <MovementSection />
       </section>
 
-      <section id="future">
+      <AboutSection />
+
+      {/* <section id="future">
         <Future />
-      </section>
+      </section> */}
 
       <section id="roadmap">
         <Roadmap />

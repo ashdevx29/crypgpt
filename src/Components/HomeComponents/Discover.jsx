@@ -27,12 +27,10 @@ const Visionaries = () => {
       <div className="cgpt-top-bar">
         <div className="cgpt-description-box">
           <p>
-            Discover the power of CrypGPT AI, where advanced intelligence meets 
-            real-time crypto strategy. Unlock smarter decisions, automated execution, 
-            and next-level trading performance.
+            CrypGPT partners with leading blockchain networks, AI technology providers, liquidity partners, and digital infrastructure platforms to strengthen and scale our intelligent crypto ecosystem. 
           </p>
         </div>
-        <h1 className="cgpt-main-title">DISCOVER THE POWER OF CRYPGPT AI</h1>
+        <h2 className="cgpt-main-title">Strategic Partners & <span>Alliances</span></h2>
       </div>
 
       <div className="cgpt-content-grid">
@@ -51,7 +49,7 @@ const Visionaries = () => {
         </div>
 
         <div className="cgpt-visionaries-center">
-          <h2 className="cgpt-section-label">Meet the Visionaries</h2>
+          <h3 className="cgpt-section-label">Meet the Visionaries</h3>
           <div className="cgpt-team-stack">
             {team.map((member, index) => (
               <div key={index} className={`cgpt-member-card ${member.className}`}>

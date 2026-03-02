@@ -1,98 +1,112 @@
-import React from 'react';
-import '../../Styles/Staking.css';
-import right from '../../assets/staking/right.mp4';
+import React, { useState, useEffect } from "react";
+import "../../Styles/Staking.css";
 
-const StakingSection = () => {
+import img1 from "../../assets/staking/stake1.png";
+import img2 from "../../assets/staking/stake1.png";
+import img3 from "../../assets/staking/stake1.png";
+
+const stakingData = [
+  {
+    heading: "CrypGPT Staking 2.0",
+    description:
+      "CrypGPT Staking 2.0 introduces an intelligent, next-generation staking experience powered by advanced AI algorithms, designed to deliver sustainable growth and optimized rewards while transforming passive holding into smart earning. With real-time performance analysis and automated reward optimization, users benefit from data-driven staking strategies that maximize potential returns. Built on secure, transparent, and scalable infrastructure, Staking 2.0 strengthens long-term value creation within the CrypGPT ecosystem.",
+    points: [
+      {
+        title: "AI-Optimized Reward Engine –",
+        text: "Smart algorithms maximize sustainable staking returns.",
+      },
+      {
+        title: "Flexible & Locked Pools –",
+        text: "Choose liquidity freedom or boosted long-term APY.",
+      },
+      {
+        title: "Secure & Transparent Infrastructure –",
+        text: "Built on audited smart contracts for maximum asset protection.",
+      },
+    ],
+    image: img1,
+  },
+  {
+    heading: "CrypGPT Exchange ",
+    description:
+      "CrypGPT is launching its own next-generation crypto exchange, built to deliver high-speed trading, deep liquidity, and AI-powered market intelligence. Designed for both beginners and professional traders, our platform will offer seamless execution, advanced tools, and enterprise-grade security. This marks a major step toward building a fully independent and powerful Web3 ecosystem.",
+    points: [
+      {
+        title: "AI-Powered Trading Engine –",
+        text: " Advanced AI integration for smarter analytics, automated strategies, and optimized trade execution.",
+      },
+      {
+        title: "High Liquidity & Low Fees –",
+        text: "Deep liquidity pools with competitive trading fees to ensure smooth and efficient transactions.",
+      },
+      {
+        title: "Secure & Scalable Infrastructure  –",
+        text: " Enterprise-level security, real-time monitoring, and scalable technology for global adoption",
+      },
+    ],
+    image: img2,
+  },
+  {
+    heading: "Next-Generation Crypto Gateway",
+    description:
+      "CrypGPT is launching its own advanced crypto payment gateway, designed to enable seamless, secure, and instant digital asset transactions. Built for businesses, traders, and Web3 platforms, the gateway will simplify crypto payments while integrating AI-powered monitoring for enhanced efficiency. This innovation strengthens the CrypGPT ecosystem by connecting users, merchants, and global markets effortlessly.",
+    points: [
+      {
+        title: "Seamless Crypto Payments –",
+        text: "Fast, borderless transactions with multi-asset support for businesses and users worldwide.",
+      },
+      {
+        title: "AI-Powered Risk Monitoring –",
+        text: "Intelligent fraud detection and real-time transaction analysis for maximum security.",
+      },
+      {
+        title: "Scalable Web3 Integration  –",
+        text: " Easy API integration for platforms, merchants, and decentralized applications.",
+      },
+    ],
+    image: img3,
+  },
+];
+
+const Staking = () => {
+  const [index, setIndex] = useState(0);
+
+  // Auto Slide every 3 sec
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % stakingData.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const current = stakingData[index];
+
   return (
-    <section className="cgpt-full-wrapper">
-      <div className="cgpt-full-container">
+    <section className="stakev2-wrapper">
+      <div className="stakev2-container">
 
-        {/* LEFT CONTENT AREA */}
-        <div className="cgpt-full-hero">
-          <h2 className="cgpt-full-hero__title">
-            Stake. Earn. Scale — <br />
-            Powered by  <span className="cgpt-full-hero__accent">CrypGPT AI.</span>
-          </h2>
+        {/* LEFT */}
+        <div className="stakev2-left fade-animation">
+          <h2 className="stakev2-heading">{current.heading}</h2>
 
-          <p className="cgpt-full-hero__desc">
-            CrypGPT Staking lets you lock your tokens to earn AI-powered intelligent rewards. Generate passive income while supporting ecosystem growth and network stability. Built with dynamic reward models and long-term incentives for sustainable, scalable returns.
-          </p>
+          <p className="stakev2-description">{current.description}</p>
 
-          {/* LIST WITH YELLOW DOTS */}
-          <ul className="cgpt-full-hero__list">
-            <li>Flexible & Locked Staking Pools</li>
-            <li>AI-Optimized Reward Distribution</li>
-            <li>Real-Time Reward Tracking Dashboard</li>
-            <li>Tier-Based APY Multipliers</li>
-            <li>Secure Smart Contract Infrastructure</li>
-          </ul>
+          <div className="stakev2-points">
+            {current.points.map((item, i) => (
+              <p className="stakev2-line" key={i}>
+                <span className="stakev2-line-title">{item.title}</span>
+                {item.text}
+              </p>
+            ))}
+          </div>
 
-          <button className="cgpt-full-hero__btn">
-            Start Staking Now <span className="cgpt-full-hero__arrow">→</span>
-          </button>
+          <button className="stakev2-button">Coming Soon</button>
         </div>
 
-        {/* RIGHT SIDE: HUD WITH BLACK FILL & VIDEO */}
-        <div className="cgpt-full-hud">
-          <div className="cgpt-full-hud__relative">
-            <svg width="729" height="393" viewBox="0 0 729 393" fill="none" xmlns="http://www.w3.org/2000/svg" className="cgpt-hud-svg-main">
-
-              {/* 1. Black Background Fill (Main Shape) */}
-              <path d="M190.24 11.4694L204.042 25.8014L204.189 25.9547L512.808 25.9547L512.948 25.8327L529.599 11.4694L694.238 11.4694L715.707 41.36L715.707 353.712L694.064 380.156H628.762L610.013 364.528L609.873 364.412L115.414 364.412L115.264 364.595L102.59 380.156H37.3223L15.7012 357.35L15.7012 42.6354L40.8389 11.4694L190.24 11.4694Z" fill="black" />
-
-              {/* 2. Video Viewport via ForeignObject */}
-              <foreignObject x="45" y="45" width="640" height="300">
-                <div className="hud-video-container" xmlns="http://www.w3.org/1999/xhtml">
-                  <video autoPlay muted loop playsInline className="hud-video">
-                    <source src={right} type="video/mp4" />
-                  </video>
-                </div>
-              </foreignObject>
-
-              {/* 3. Your Exact SVG Borders & Decoration */}
-              <path d="M465.25 15.2946L505.571 15.2946L522.286 1L702.639 1L728.001 36.4899V108.456" stroke="url(#paint0_linear_2_3)" strokeWidth="2" />
-              <path d="M190.24 11.4694L204.042 25.8014L204.189 25.9547L512.808 25.9547L512.948 25.8327L529.599 11.4694L694.238 11.4694L715.707 41.36L715.707 353.712L694.064 380.156H628.762L610.013 364.528L609.873 364.412L115.414 364.412L115.264 364.595L102.59 380.156H37.3223L15.7012 357.35L15.7012 42.6354L40.8389 11.4694L190.24 11.4694Z" stroke="white" strokeOpacity="0.2" />
-              <path d="M1 196.805L1 361.358L28.9443 391.999H103.463" stroke="url(#paint1_linear_2_3)" strokeWidth="2" />
-
-              {/* <path d="M196.791 11.4686L203.385 11.4686L214.037 23.2986L207.443 23.2986L196.791 11.4686Z" fill="url(#paint2_linear_2_3)" /> */}
-              {/* SLASH 1 */}
-              <path d="M196.791 11.4686L203.385 11.4686L214.037 23.2986L207.443 23.2986L196.791 11.4686Z" fill="url(#paint2_linear_2_3)" />
-
-              {/* SLASH 2 */}
-              <path d="M210.791 11.4686L217.385 11.4686L228.037 23.2986L221.443 23.2986L210.791 11.4686Z" fill="url(#paint2_linear_2_3)" />
-
-              {/* SLASH 3 */}
-              <path d="M224.791 11.4686L231.385 11.4686L242.037 23.2986L235.443 23.2986L224.791 11.4686Z" fill="url(#paint2_linear_2_3)" />
-
-              {/* SLASH 4 */}
-              <path d="M238.791 11.4686L245.385 11.4686L256.037 23.2986L249.443 23.2986L238.791 11.4686Z" fill="url(#paint2_linear_2_3)" />
-
-              {/* SLASH 5 */}
-              <path d="M252.791 11.4686L259.385 11.4686L270.037 23.2986L263.443 23.2986L252.791 11.4686Z" fill="url(#paint2_linear_2_3)" />
-
-              {/* SLASH 1 */}
-              <path d="M558.844 370.515H565.235L575.558 380.667H569.167L558.844 370.515Z" fill="url(#paint3_linear_2_3)" />
-              {/* SLASH 2 */}
-              <path d="M572.844 370.515H579.235L589.558 380.667H583.167L572.844 370.515Z" fill="url(#paint3_linear_2_3)" />
-
-              {/* SLASH 3 */}
-              <path d="M586.844 370.515H593.235L603.558 380.667H597.167L586.844 370.515Z" fill="url(#paint3_linear_2_3)" />
-
-              {/* SLASH 4 */}
-              <path d="M600.844 370.515H607.235L617.558 380.667H611.167L600.844 370.515Z" fill="url(#paint3_linear_2_3)" />
-
-              {/* SLASH 5 */}
-              <path d="M544.844 370.515H551.235L561.558 380.667H555.167L544.844 370.515Z" fill="url(#paint3_linear_2_3)" />
-              {/* <path d="M614.844 370.515H621.235L631.558 380.667H625.167L614.844 370.515Z" fill="url(#paint3_linear_2_3)" /> */}
-
-              <defs>
-                <linearGradient id="paint0_linear_2_3" x1="596.625" y1="1" x2="596.625" y2="108.456" gradientUnits="userSpaceOnUse"><stop stopColor="#FDF803" /><stop offset="1" stopColor="#E5AB24" /></linearGradient>
-                <linearGradient id="paint1_linear_2_3" x1="52.2313" y1="196.805" x2="52.2313" y2="391.999" gradientUnits="userSpaceOnUse"><stop stopColor="#FDF803" /><stop offset="1" stopColor="#E5AB24" /></linearGradient>
-                <linearGradient id="paint2_linear_2_3" x1="205.414" y1="11.4686" x2="205.414" y2="23.2986" gradientUnits="userSpaceOnUse"><stop stopColor="#FDF803" /><stop offset="1" stopColor="#E5AB24" /></linearGradient>
-                <linearGradient id="paint3_linear_2_3" x1="567.201" y1="370.515" x2="567.201" y2="380.667" gradientUnits="userSpaceOnUse"><stop stopColor="#FDF803" /><stop offset="1" stopColor="#E5AB24" /></linearGradient>
-              </defs>
-            </svg>
-          </div>
+        {/* RIGHT */}
+        <div className="stakev2-right fade-animation">
+          <img src={current.image} alt="staking visual" />
         </div>
 
       </div>
@@ -100,4 +114,4 @@ const StakingSection = () => {
   );
 };
 
-export default StakingSection;
+export default Staking;

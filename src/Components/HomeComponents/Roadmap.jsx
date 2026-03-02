@@ -14,7 +14,7 @@ const CgptStrategy = () => {
     // 2026 DATA
     {
       year: "2025",
-      heroTitle: { line1: "Foundation &  ", line2: "Market Entry" },
+      heroTitle: { line1: "Foundation & Market  ", line2: "Entry" },
       phase: "Q3 2025",
       title: "Public Launch & Ecosystem Foundation",
       desc: ["Token Launch", "Official Website & Whitepaper Release", "Global Community Building Campaign", "Listings on CMC, CoinGecko, Coin360 & CoinBubble"],
@@ -23,7 +23,7 @@ const CgptStrategy = () => {
     },
     {
       year: "2025",
-      heroTitle: { line1: "Foundation &  ", line2: "Market Entry" },
+      heroTitle: { line1: "Foundation & Market  ", line2: "Entry" },
       phase: "Q4 2025",
       title: "Exchange Listings & AI Rollout",
       desc: ["Blofin Dextrade ", "Audit Report Published", "Cyberscope Smart Contract Audit", "AI Trading Signal Assistant Launch", "Telegram AI Bot Integration", "Strategic Partnerships", "Additional Tier-2 Exchange Listing" ],
@@ -32,7 +32,7 @@ const CgptStrategy = () => {
     },
     {
       year: "2026",
-      heroTitle: { line1: "Expansion & ", line2: "Infrastructure Growth" },
+      heroTitle: { line1: "Expansion & Infrastructure ", line2: "Growth" },
       phase: "Q1 2026",
       title: "AI Intelligence & Tier Expansion",
       desc: ["WEEX, MEXC, and Biconomy exchange listings.", "AI Portfolio Management Tool Launch", "Multi-Language CrypGPT Chatbot (Beta)", "Multi-Language CrypGPT Chatbot (Beta)", "CertiK Smart Contract Audit", "Global Community Expansion"],
@@ -41,7 +41,7 @@ const CgptStrategy = () => {
     },
     {
       year: "2026",
-      heroTitle: { line1: "Expansion & ", line2: "Infrastructure Growth" },
+      heroTitle: { line1: "Expansion & Infrastructure ", line2: "Growth" },
       phase: "Q2 2026",
       title: "Payments & Advanced AI Systems",
       desc: ["Crypto Card Launch (Fiat + Crypto Payments)", "AI Fraud Detection System Goes Live", "AI-Based Centralized Exchange Launch", "CrypGateways Payment Expansion"],
@@ -51,7 +51,7 @@ const CgptStrategy = () => {
     // 2027 DATA
     {
       year: "2026",
-      heroTitle: { line1: "Expansion & ", line2: "Infrastructure Growth" },
+      heroTitle: { line1: "Expansion & Infrastructure ", line2: "Growth" },
       phase: "Q3 2026",
       title: "Utility & Engagement Layer",
       desc: ["Move-to-Earn + Chat-to-Earn Rollout", "Decentralized Knowledge Hub (Alpha)", "Large-Scale AI Marketplace Launch", "Staking Platform Launch"],
@@ -60,7 +60,7 @@ const CgptStrategy = () => {
     },
     {
       year: "2026",
-      heroTitle: { line1: "Expansion & ", line2: "Infrastructure Growth" },
+      heroTitle: { line1: "Expansion & Infrastructure ", line2: "Growth" },
       phase: "Q4 2026",
       title: "Full Ecosystem Maturity",
       desc: ["Complete Ecosystem Integration", "Additional Top-Tier Exchange Listings", "1M+ Users Milestone", "Global Institutional Partnerships"],
@@ -69,7 +69,7 @@ const CgptStrategy = () => {
     },
     {
       year: "2027",
-      heroTitle: { line1: "Global Scale &  ", line2: "Decentralized Evolution" },
+      heroTitle: { line1: "Global Scale & Decentralized  ", line2: "Evolution" },
       phase: "Q1 2027",
       title: "Governance & DeFi Expansion",
       desc: ["DAO Governance Full Implementation", "Advanced On-Chain Analytics Dashboard", "Cross-Chain Integration (Multi-Blockchain Support)", "Institutional Crypto Payment Solutions"],
@@ -78,7 +78,7 @@ const CgptStrategy = () => {
     },
     {
       year: "2027",
-      heroTitle: { line1: "Global Scale &  ", line2: "Decentralized Evolution" },
+      heroTitle: { line1: "Global Scale & Decentralized  ", line2: " Evolution" },
       phase: "Q2 2027",
       title: "Global Adoption & AI Evolution",
       desc: ["AI 2.0 Upgrade (Self-Learning Market Intelligence Engine)", "Global Merchant Network Expansion via CrypGateways", "2M+ Users Milestone", "Strategic Global Technology Partnerships"],
@@ -102,7 +102,7 @@ const CgptStrategy = () => {
   const further = roadmap[(current + 2) % roadmap.length];
 
   return (
-    <div className="cg-strategy-section">
+    <div id='roadmap' className="cg-strategy-section">
       <div className="cg-top-header">
         <h2 className="cg-hero-title">
           <span className="title-line line1">

@@ -36,17 +36,17 @@ function EcosystemPop({ onClose }) {
 
             {/* LEFT SIDE */}
             <div className="ecosystem-left">
-              <h1 className="ecosystem-title">Ecosystem</h1>
+              <h2 className="ecosystem-title">Ecosystem</h2>
               <p className="ecosystem-desc">
                 CrypGPT is an AI-powered crypto ecosystem that brings trading, security, payments, governance, and rewards together in one seamless platform.
               </p>
 
-              <div className="pill-container">
+              {/* <div className="pill-container">
                 <div className="pill-row row-1">
-                  <div className="one-pill pill-lg">MEXC</div>
+                  <div className="one-pill pill-lg">token</div>
                 </div>
                 <div className="pill-row row-2">
-                  <div className="one-pill">BSC Scan</div>
+                  <div className="one-pill">contact us</div>
                   <div className="one-pill">White Paper</div>
                 </div>
                 <div className="pill-row row-3">
@@ -54,7 +54,59 @@ function EcosystemPop({ onClose }) {
                   <div className="one-pill pill-sm">Roadmap</div>
                   <div className="one-pill pill-sm">Partner</div>
                 </div>
-              </div>
+              </div> */}
+              <div className="pill-container">
+  <div className="pill-row row-1">
+    {/* Token Link */}
+    <div 
+      className="one-pill pill-lg clickable-pill" 
+      onClick={() => goTo("/token")}
+    >
+      token
+    </div>
+  </div>
+
+  <div className="pill-row row-2">
+    {/* Contact Us Link */}
+    <div 
+      className="one-pill clickable-pill" 
+      onClick={() => goTo("/contact")}
+    >
+      contact us
+    </div>
+    {/* White Paper Link - Agar ye external PDF hai toh window.open use karein */}
+    <div 
+      className="one-pill clickable-pill" 
+      onClick={() => window.open("https://crypgpt-token.gitbook.io/crypgpts-token/", "_blank")}
+    >
+      White Paper
+    </div>
+  </div>
+
+  <div className="pill-row row-3">
+    {/* Community Link */}
+    <div 
+      className="one-pill clickable-pill" 
+      onClick={() => window.open("https://linktr.ee/crypgpt_token?utm_source=linktree_profile_share&ltsid=992a89e8-2fe2-4cd7-9104-aa211d9824b1", "_blank")}
+    >
+      Community
+    </div>
+    {/* Roadmap Link */}
+    <div 
+      className="one-pill pill-sm clickable-pill" 
+      onClick={() => window.open("https://blofin.com/spot/CRYPGPT-USDT", "_blank")}
+    >
+      Buy Now
+    </div>
+    {/* Partner Link */}
+    <div 
+      className="one-pill pill-sm clickable-pill" 
+      onClick={() => goTo("/privacy-policy")}
+    >
+      Policy
+    </div>
+  </div>
+</div>
             </div>
 
            

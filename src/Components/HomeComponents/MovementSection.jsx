@@ -1,9 +1,10 @@
 import React from 'react';
 import '../../Styles/Movement.css';
+import { MdArrowOutward } from "react-icons/md";
 // Asset Imports
 import movementVideo from "../../assets/movement/center.mp4";
 import moveIcon1 from "../../assets/movement/insta.png";
-import moveIcon2 from "../../assets/movement/twitter.png";
+import moveIcon2 from "../../assets/movement/twi.png";
 import moveIcon3 from "../../assets/movement/teli.png";
 import moveIcon4 from "../../assets/movement/m.png";
 
@@ -20,14 +21,8 @@ const MovementSection = () => {
           <div className="move-border-animator move-reverse"></div>
           <div className="move-card-inner">
             <h2 className="move-title-text">JOIN THE AI <span className="move-crypgpt">CRYPGPT</span> MOVEMENT</h2>
-            <p className="move-description">Follow CrypGPT for AI trading signals, product updates, and community access.</p>
+            <p className="move-description">Follow CrypGPT for AI trading signals, product updates, market insights and exclusive community access.</p>
 
-            {/* <div className="move-social-row">
-              <div className="move-social-item"><img src={moveIcon1} alt="Insta" /></div>
-              <div className="move-social-item"><img src={moveIcon2} alt="FB" /></div>
-              <div className="move-social-item"><img src={moveIcon3} alt="Telegram" /></div>
-              <div className="move-social-item"><img src={moveIcon4} alt="Medium" /></div>
-            </div> */}
 
             <div className="move-social-row">
               <div className="move-social-item">
@@ -55,7 +50,16 @@ const MovementSection = () => {
               </div>
             </div>
 
-            <button className="move-primary-btn">Join Now ↗</button>
+            <a
+              href="https://linktr.ee/crypgpt_token?utm_source=linktree_profile_share&ltsid=992a89e8-2fe2-4cd7-9104-aa211d9824b1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="move-primary-btn"
+            >
+              <span>Join Now</span>
+              <MdArrowOutward className="btn-icon" />
+            </a>
+
           </div>
         </div>
 
@@ -67,7 +71,7 @@ const MovementSection = () => {
               <source src={movementVideo} type="video/mp4" />
             </video>
             <div className="move-content-overlay">
-              <div className="move-indicator-circle">↗</div>
+              {/* <div className="move-indicator-circle">↗</div> */}
               <h3 className="move-video-caption"><span className="move-accent">CRYPGPT</span> ECOSYSTEM JOURNEY</h3>
             </div>
           </div>

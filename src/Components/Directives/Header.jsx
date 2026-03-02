@@ -36,7 +36,6 @@ function Header() {
   // Bahar click karne par band karne ka logic
   useEffect(() => {
     const handleClickOutside = (event) => {
-      // Agar click ecosystemRef waale div ke bahar hua hai, toh menu band kar do
       if (ecosystemRef.current && !ecosystemRef.current.contains(event.target)) {
         setIsEcosystemOpen(false);
       }
@@ -51,7 +50,7 @@ function Header() {
 
   const toggleEcosystem = (e) => {
     e.preventDefault();
-    setIsEcosystemOpen(prev => !prev);
+    setIsEcosystemOpen(!isEcosystemOpen);
   };
 
   return (
@@ -78,7 +77,7 @@ function Header() {
             </span>
             <div className="stat-column">
               <span className="stat-main">13 M</span>
-              <span className="stat-sub">CRYPGPT </span>
+              <span className="stat-sub">CRYPGPT</span>
             </div>
           </a>
 
@@ -116,15 +115,7 @@ function Header() {
               </NavLink>
             </li>
 
-            {/* <li>
-              <NavLink to="/token">
-                <span className="nav-dot"></span>
-                Token
-                <span className="nav-arrow">
-                  <PiArrowBendDownRightFill />
-                </span>
-              </NavLink>
-            </li> */}
+
 
             {/* <li>
             <NavLink to="/ecosystem">
@@ -137,7 +128,7 @@ function Header() {
           </li> */}
 
             {/* Ecosystem Item with Ref */}
-            <li className="ecosystem-nav-item" ref={ecosystemRef}>
+            {/* <li className="ecosystem-nav-item">
               <a
                 href="#"
                 onClick={toggleEcosystem}
@@ -145,26 +136,51 @@ function Header() {
               >
                 <span className="nav-dot"></span>
                 Ecosystem
-                {/* <span className={`nav-arrow mobile-arrow ${isEcosystemOpen ? "rotate" : ""}`}> */}
+                <span className={`nav-arrow mobile-arrow ${isEcosystemOpen ? "rotate" : ""}`}>
+                  <PiArrowBendDownRightFill />
+                </span>
+              </a>
+
+              {isEcosystemOpen && (
+                <div className="mobile-eco-dropdown">
+                  <EcosystemPop onClose={() => setIsEcosystemOpen(false)} />
+                </div>
+              )}
+            </li> */}
+
+            <li
+              className="ecosystem-nav-item"
+              ref={ecosystemRef}
+            >
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setIsEcosystemOpen((prev) => !prev);
+                }}
+                className={isEcosystemOpen ? "active" : ""}
+              >
+                <span className="nav-dot"></span>
+                Ecosystem
+
                 <span
-                  className={`nav-arrow ecosystem-arrow  ${isEcosystemOpen ? "rotate-open" : ""
+                  className={`nav-arrow ecosystem-arrow ${isEcosystemOpen ? "rotate" : ""
                     }`}
                 >
                   <PiArrowBendDownRightFill />
                 </span>
               </a>
 
-              {/* 👇 MOBILE ACCORDION CONTENT */}
               {isEcosystemOpen && (
                 <div className="mobile-eco-dropdown">
                   <EcosystemPop onClose={() => setIsEcosystemOpen(false)} />
                 </div>
+               
               )}
             </li>
 
-            {/* Aapka pehle wala mega-menu-content yahan rahega */}
 
-              <li>
+            <li>
               <NavLink to="/token">
                 <span className="nav-dot"></span>
                 Token
@@ -174,10 +190,9 @@ function Header() {
               </NavLink>
             </li>
 
-
             <li>
               <a
-                href="https://crypgpt-9x2fp4n.gamma.site/"
+                href="https://crypgpt-token.gitbook.io/crypgpts-token/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -206,7 +221,6 @@ function Header() {
                 onClick={(e) => {
                   e.preventDefault();
                   setIsMobileMenuOpen(false);
-                  setIsEcosystemOpen(false);
                   setIsConsentOpen(true);
                 }}
               >
@@ -293,32 +307,16 @@ function Header() {
 
         </div>
 
-        <div className="mobile-menu-toggle">
-          {!isMobileMenuOpen ? (
-            <HiMenuAlt1
-              size={28}
-              className="menu-icon"
-              onClick={() => setIsMobileMenuOpen(true)}
-            />
+        <div
+          className="mobile-menu-toggle"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? (
+            <HiX size={28} className="menu-icon" />
           ) : (
-            <HiX
-              size={28}
-              className="menu-icon close-icon"
-              onClick={() => setIsMobileMenuOpen(false)}
-            />
+            <HiMenuAlt1 size={28} className="menu-icon" />
           )}
         </div>
-
-        {/* <div
-        className="mobile-menu-toggle"
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-      >
-        {isMobileMenuOpen ? (
-          <HiX size={28} className="menu-icon" />
-        ) : (
-          <HiMenuAlt1 size={28} className="menu-icon" />
-        )}
-      </div> */}
       </header>
 
       {/* {isEcosystemOpen && (

@@ -26,10 +26,10 @@ function SectionFour() {
   ];
 
   return (
-    <section className="relative bg-[#0a0a0a] text-white py-16 overflow-hidden min-w-[300px]">
+    <section className="relative bg-[#0A0A0A] text-white py-6 md:py-16 overflow-hidden min-w-[300px]">
 
       {/* Centered Container (Matches Other Sections) */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 xl:px-32">
+      <div className="max-w-[1500px] mx-auto px-6 md:px-10 lg:px-20 xl:px-32">
 
         {/* 1. TOP LEFT GLOW IMAGE */}
         <div className="absolute top-0 left-0 w-full max-w-2xl pointer-events-none z-0">
@@ -46,19 +46,19 @@ function SectionFour() {
 
           {/* Header Section */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 md:gap-6 mb-6 md:mb-12">
-            <p className="text-gray-400 text-medium max-w-[280px] leading-relaxed font-lato">
+            <p className="text-[#A9A9A9] text-medium max-w-[300px]  font-lato">
               Whether you're a startup looking for company aiming for expansion,<br/>
               we are here to support
             </p>
 
-            <h1 className="text-4xl md:text-6xl font-semibold font-kanit tracking-tight">
+            <h1 className="text-4xl md:text-6xl font-[300] font-kanit tracking-tight">
               <span className="text-[#facc15]">Security</span> & Compliance
             </h1>
           </div>
 
           {/* 2. CENTRAL GRAPHIC IMAGE */}
-          <div className="w-full mb-6 md:mb-8">
-            <div className="relative w-full aspect-[21/9] md:aspect-[3/1] overflow-hidden">
+          <div className="w-full mb-6 md:mb-8 rounded-lg overflow-hidden">
+            <div className="relative w-full aspect-[21/9] rounded-lg md:aspect-[3/1] overflow-hidden">
                 <img
                 src={closeupImg}
                 alt="Security Icons Graphic"
@@ -76,7 +76,7 @@ function SectionFour() {
               >
                 <div className="flex justify-between items-start mb-4 md:mb-16">
 
-                  <h3 className="text-lg md:text-xl font-medium font-lato leading-tight max-w-[80%] text-zinc-200">
+                  <h3 className="text-lg md:text-xl font-[300] font-lato leading-tight max-w-[80%] text-zinc-200">
                     {card.title}
                   </h3>
 
@@ -93,7 +93,7 @@ function SectionFour() {
                   </div>
                 </div>
 
-                <p className="text-white text-sm font-lato justify-center leading-relaxed">
+                <p className="text-[#FFFFFF] text-[18px] font-[300] font-lato justify-center">
                   {card.description}
                 </p>
               </div>

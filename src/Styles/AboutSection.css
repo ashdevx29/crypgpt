@@ -1,0 +1,277 @@
+.about-section {
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.about-wrapper {
+  max-width: 1320px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* LEFT */
+.about-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.cgpt-hud-svg-main {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Video */
+.hud-video-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hud-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* RIGHT */
+.about-right {
+  flex: 1;
+  max-width: 520px;
+}
+
+.about-tag {
+  background: #42353145;
+  padding: 6px 18px;
+  border-radius: 63px;
+  font-family: Poppins;
+  font-size: 14px;
+  color: #FDF803;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.about-heading {
+  font-family: Kanit;
+  font-size: 64px;
+  line-height: 1.2;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+}
+
+.about-heading span {
+  color: #FDF803;
+}
+
+.about-text {
+  color: #BDBDBD;
+  font-family: Open Sans;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* ========================= */
+/* ===== 1200px Screen ===== */
+/* ========================= */
+
+@media (max-width: 1200px) {
+  .about-wrapper {
+    gap: 40px;
+  }
+
+  .about-heading {
+    font-size: 42px;
+  }
+}
+
+/* ========================= */
+/* ===== 1024px Screen ===== */
+/* ========================= */
+
+@media (max-width: 1024px) {
+  .about-wrapper {
+    gap: 30px;
+  }
+
+  .about-heading {
+    font-size: 36px;
+  }
+
+  .about-text {
+    font-size: 16px;
+  }
+}
+
+/* ========================= */
+/* ===== 992px Tablet ====== */
+/* ========================= */
+
+@media (max-width: 992px) {
+  .about-wrapper {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about-right {
+    max-width: 100%;
+  }
+
+  .about-left {
+    width: 100%;
+  }
+
+  .about-heading {
+    font-size: 48px;
+  }
+}
+
+/* ========================= */
+/* ===== 768px Mobile ====== */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 20px 12px;
+  }
+
+  .about-heading {
+    font-size: 36px;
+  }
+
+  .about-text {
+    font-size: 15px;
+  }
+}
+
+/* ========================= */
+/* ===== 480px Small ======= */
+/* ========================= */
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 30px 15px;
+  }
+
+  .about-heading {
+    font-size: 28px;
+  }
+
+  .about-text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .about-tag {
+    font-size: 12px;
+    padding: 5px 14px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* .about-section {
+    padding: 20px 20px;
+    color: #fff;
+}
+
+.about-wrapper {
+    max-width: 1300px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.about-left {
+    width: 50%;
+}
+
+.cgpt-hud-svg-main {
+    width: 100%;
+    height: auto;
+}
+
+.hud-video-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.hud-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  display: block;
+}
+
+.about-right {
+    width: 41%;
+}
+
+.about-tag {
+    background: #42353145;
+    padding: 5px 15px;
+    border-radius: 63px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%; 
+    color: #FDF803;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.about-heading {
+    font-family: Kanit;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 1.2;
+    letter-spacing: 0%;
+    text-transform: capitalize;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.about-heading span {
+    color: #FDF803;
+}
+
+.about-text {
+    color: #BDBDBD;
+    font-family: Open Sans;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0%;
+}
+
+
+@media (max-width: 1024px) {
+    .about-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-left,
+    .about-right {
+        width: 100%;
+    }
+
+    .about-heading {
+        font-size: 36px;
+    }
+} */

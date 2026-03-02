@@ -5,6 +5,7 @@ import tw from "../../assets/footer/1.png"
 import fb from "../../assets/footer/medi.png"
 import insta from "../../assets/footer/tele.png"
 import github from "../../assets/footer/logo-instagram 1.png"
+import { Link } from "react-router-dom";
 
 
 const Footer = () => {
@@ -72,7 +73,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="cgpt-footer-bottom">
           <div className="cgpt-bottom-links">
-            <a href="#">About us</a>
+           <Link to="/?section=about">About Us</Link>
             <a href="/contact-us">Contact</a>
             <a href="/privacy-policy">Privacy policy</a>
             <a href="/terms-and-conditions">Terms of Use</a>

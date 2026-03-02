@@ -10,48 +10,48 @@ import threee from "../../assets/partners/svg-partner/active.svg"
 import fourr from "../../assets/partners/svg-partner/phantom.svg"
 import fivee from "../../assets/partners/svg-partner/edito.svg"
 
-import apspace from "../../assets/partners/partner/APSPACE 1.png";
+// import apspace from "../../assets/partners/partner/APSPACE 1.png";
 import blofin from "../../assets/partners/partner/BloFin 1.png";
 import coinscope from "../../assets/partners/partner//Coinscope 1.png";
 import blockspot from "../../assets/partners/partner/cropped-blockspot-logo-white.png 1.png";
 import dex from "../../assets/partners/partner/Dex 1.png";
 import dextool from "../../assets/partners/partner/dextools_logo_full_dark 1.png";
 import floz from "../../assets/partners/partner/Flooz 1.png";
-import gechotarminal from "../../assets/partners/partner/geckoterminal 1.png";
+// import gechotarminal from "../../assets/partners/partner/geckoterminal 1.png";
 import gemfider from "../../assets/partners/partner/Group 1321315828.png";
 import dexguru from "../../assets/partners/partner/Group 1321315849.png";
 import mycoinvote from "../../assets/partners/partner/Group 1321315850.png";
 import pumpfun from "../../assets/partners/partner/Group 1321315851.png";
 import poocoin from "../../assets/partners/partner/Group 1321315852.png";
-import livecoinwatch from "../../assets/partners/partner/images 2.png";
+// import livecoinwatch from "../../assets/partners/partner/images 2.png";
 import coingem from "../../assets/partners/partner/logo.85f464b4 1.png";
 import honeypot from "../../assets/partners/partner/Mask group.png";
 
 
 const PartnersSection = () => {
-  const [activeTab, setActiveTab] = useState('EXCHANGES');
+  const [activeTab, setActiveTab] = useState('Strategic Partners');
 
   const partnersData = {
-    EXCHANGES: [
+    "Strategic Partners": [
       { id: 1, img: one, url: "https://dex.coinmarketcap.com/token/bsc/0xc643f4dd66a10955e53e3f67a81ba54703d3b7fb/" },
       { id: 2, img: two, url: "https://www.coingecko.com/en/coins/crypgpt" },
       { id: 3, img: four, url: "https://www.mexc.com/exchange/CRYPGPT_USDT" },
       { id: 4, img: three, url: "https://pancakeswap.finance/swap?inputCurrency=0x55d398326f99059fF775485246999027B3197955&outputCurrency=0xe0Ae52E75b38B605E9c879a570ee1E7bCC66254B&chain=bsc" },
       { id: 5, img: fourr, url: "https://phantom.com/tokens/base/0xd04519aee0128f2c1407b88096e6c8b0d5980f84" },
-      { id: 6, img: apspace, url: "https://apespace.io/bsc/0x55a209722ebb99c2f42befc5147c022b9b7cc83d" },
+      // { id: 6, img: apspace, url: "https://apespace.io/bsc/0x55a209722ebb99c2f42befc5147c022b9b7cc83d" },
       { id: 7, img: blofin, url: "https://blofin.com/spot/en/CRYPGPT-USDT" },
       { id: 8, img: coinscope, url: "https://www.coinscope.co/coin/crypgpt" },
       { id: 9, img: blockspot, url: "https://blockspot.io/coin/crypgpt-token/" },
       { id: 10, img: dex, url: "https://dexscreener.com/bsc/0x077591ba61d762393f003f77dc93e001db80d130" },
       { id: 11, img: dextool, url: "https://www.dextools.io/app/bnb/pair-explorer/0x077591ba61d762393f003f77dc93e001db80d130?t=1760359770143" },
       { id: 12, img: floz, url: "https://flooz.xyz/ai" },
-      { id: 13, img: gechotarminal, url: "https://www.geckoterminal.com/bsc/pools/0x077591ba61d762393f003f77dc93e001db80d130" },
+      // { id: 13, img: gechotarminal, url: "https://www.geckoterminal.com/bsc/pools/0x077591ba61d762393f003f77dc93e001db80d130" },
       { id: 14, img: gemfider, url: "https://gemfinder.cc/promote" },
       { id: 15, img: dexguru, url: "https://dex.guru/token/bsc/0xe0ae52e75b38b605e9c879a570ee1e7bcc66254b" },
       { id: 16, img: mycoinvote, url: "" },
       { id: 17, img: pumpfun, url: "" },
       { id: 18, img: poocoin, url: "https://poocoin.app/tokens/0xe0ae52e75b38b605e9c879a570ee1e7bcc66254b" },
-      { id: 19, img: livecoinwatch, url: "https://www.livecoinwatch.com/price/CrypGPT-___CGPT" },
+      // { id: 19, img: livecoinwatch, url: "https://www.livecoinwatch.com/price/CrypGPT-___CGPT" },
       { id: 20, img: coingem, url: "https://coingem.com/binance/crypgpt" },
       { id: 21, img: honeypot, url: "https://honeypot.is/?address=0xe0Ae52E75b38B605E9c879a570ee1E7bCC66254B" },
     ],
@@ -63,14 +63,34 @@ const PartnersSection = () => {
     ],
   };
 
-  const tabs = ["EXCHANGES", "Our Press Release"];
+  const tabs = ["Strategic Partners", "Our Press Release"];
 
   return (
-    <div className="container">
+    <div className="pr-container">
       <div className="header-wrapper">
         {/* Left SVG */}
         <div className="svg-line">
-          <svg width="274" height="80" viewBox="0 0 274 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="365" height="125" viewBox="0 0 365 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_left)">
+              <g clip-path="url(#clip1_left)">
+                <path d="M-0.000244141 0.996582H141.593C147.937 0.996582 154.021 3.51685 158.508 8.00297L237.19 86.6853C241.676 91.1714 247.761 93.6917 254.105 93.6917H364.8"
+                  stroke="url(#paint0_linear_left)" stroke-width="1.99344" />
+              </g>
+            </g>
+            <defs>
+              <linearGradient id="paint0_linear_left" x1="182.4" y1="0.996582" x2="182.4" y2="93.6917" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FDF803" />
+                <stop offset="1" stop-color="#E5AB24" />
+              </linearGradient>
+              <clipPath id="clip0_left">
+                <rect width="364.8" height="124.8" fill="white" />
+              </clipPath>
+              <clipPath id="clip1_left">
+                <rect width="364.8" height="123.593" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          {/* <svg width="364" height="124" viewBox="0 0 274 93" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 1H91.8727L166.055 92H273" stroke="url(#paint0_linear_482_1630)" strokeWidth="2" strokeLinecap="round" />
             <defs>
               <linearGradient id="paint0_linear_482_1630" x1="273" y1="92.6842" x2="-2.50366" y2="24.7978" gradientUnits="userSpaceOnUse">
@@ -78,7 +98,7 @@ const PartnersSection = () => {
                 <stop offset="1" stopColor="#110E0D" />
               </linearGradient>
             </defs>
-          </svg>
+          </svg> */}
         </div>
 
         {/* Tabs Filter */}
@@ -96,7 +116,27 @@ const PartnersSection = () => {
 
         {/* Right SVG */}
         <div className="svg-line">
-          <svg width="278" height="80" viewBox="0 0 278 93" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="365" height="125" viewBox="0 0 365 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_right)">
+              <g clip-path="url(#clip1_right)">
+                <path d="M364.741 0.996582H223.147C216.803 0.996582 210.719 3.51685 206.233 8.00297L127.551 86.6853C123.064 91.1714 116.979 93.6917 110.635 93.6917H-0.0595047"
+                  stroke="url(#paint0_linear_right)" stroke-width="1.99344" />
+              </g>
+            </g>
+            <defs>
+              <linearGradient id="paint0_linear_right" x1="182.341" y1="0.996582" x2="182.341" y2="93.6917" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FDF803" />
+                <stop offset="1" stop-color="#E5AB24" />
+              </linearGradient>
+              <clipPath id="clip0_right">
+                <rect width="364.8" height="124.8" fill="white" transform="matrix(-1 0 0 1 364.8 0)" />
+              </clipPath>
+              <clipPath id="clip1_right">
+                <rect width="364.8" height="123.593" fill="white" transform="matrix(-1 0 0 1 364.8 0)" />
+              </clipPath>
+            </defs>
+          </svg>
+          {/* <svg width="278" height="80" viewBox="0 0 278 93" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M277 1H184.791L109.518 92H1" stroke="url(#paint0_linear_482_1631)" strokeWidth="2" strokeLinecap="round" />
             <defs>
               <linearGradient id="paint0_linear_482_1631" x1="0.999987" y1="92.6842" x2="280.082" y2="22.9048" gradientUnits="userSpaceOnUse">
@@ -104,7 +144,7 @@ const PartnersSection = () => {
                 <stop offset="1" stopColor="#110E0D" />
               </linearGradient>
             </defs>
-          </svg>
+          </svg> */}
         </div>
       </div>
 
